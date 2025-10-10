@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json", 
+
+  "description": "Google's stock price over time.",
+
+  "data": {"url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/money_supply_clean_M2SL.csv"}, 
+  
+  "mark": "line",  
+
+  "title": {
+    "text": "Money supply",
+    "subtitle": "M2 nominal money supply, US. Source: FRED"
+  },
+
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "money supply", "type": "quantitative"}
+  }
+}
