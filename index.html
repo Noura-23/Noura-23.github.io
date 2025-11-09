@@ -100,6 +100,16 @@
         <figure id="pe_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
+       <section>
+        <div class="chart-description">
+            <h2>Week 4: South Africa and Lesotho Total Fertility Rate  </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                A chart produced using API method and data from the World Bank.
+            </p>
+        </div>
+        <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -119,6 +129,8 @@
 
         let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
 
+        let TFR_chart_path = "Week 4/TFR_live_chart.json";
+
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
@@ -130,8 +142,57 @@
          vegaEmbed('#Location2', figure_2_spec); //Practice of adding a chart to the second section created 
          vegaEmbed('#Location3', figure_3_spec); //Practice of adding a chart to the second section created
          vegaEmbed('#moneysupplychart', 'Week 2/m2_line_chart.json') //Week 2. Vega lite chart 
+         vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json' ) //Week 3. Altair chart - Office hour to fix the issue 
+         vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
 
-         vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart
+
+         //Week 5. Practice doing a loop.
+         //Loop: help not repeating a code
+         
+            //without a loop.
+         console.log("0")
+         console.log("1")
+         console.log("2")
+         console.log("3")  
+
+            //with loop 
+        //Example 1 
+         for (let i = 0; i < 4; i++){
+            console.log("Testing")
+            console.log(i)
+         } //i: variable that will change; i<4: do it until i reach 3; i++: increase i by 1. Console ?? use to put together charts ?? 
+
+         let cities = ["London", "Paris", "Milan", "Tokyo"]
+         
+         console.log("The first city is "+cities[0])
+
+         for (let i = 0; i < 4; i++){
+            console.log(cities[i])
+         }
+
+         //Example 2 
+         let chart_specs = [
+            "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json",
+            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json",
+            "Week 4/TFR_live_chart.json"
+         ]
+
+         let chart_desinations = [
+            "#Location1",
+            "#Location2",
+            "#TFR_chart"
+         ]
+
+         for (let i = 0; i < 4; i++){
+            console.log("Chart spec at: "+chart_specs[i]) //console log use to print 
+            console.log("Chart destination at: "+chart_desinations[i])
+            vegaEmbed(chart_desinations[i], chart_specs[i])
+         }
+            
+
+
+
+        
 
 
 
