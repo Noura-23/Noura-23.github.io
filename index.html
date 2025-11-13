@@ -76,7 +76,9 @@
                 As a first example, we're using a basic chart from our repo.
             </p>
         </div>
+        <h3> Graph 1</h3> 
         <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <h3> Graph 2</h3> 
         <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
@@ -125,9 +127,11 @@
         //let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig3_uk-oil-prices.json" //Example of how to add a chart to the website 
 
         let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json"; //1.Practice of adding a second chart to the second section created using its raw link 
-        let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
+        //let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
+        let figure_3_spec = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/fig5_productivity-itl3.json";
 
         let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
+        //let pe_chart_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/shiller_pe_ratio_chart.json"; 
 
         let TFR_chart_path = "Week 4/TFR_live_chart.json";
 
@@ -142,7 +146,8 @@
          vegaEmbed('#Location2', figure_2_spec); //Practice of adding a chart to the second section created 
          vegaEmbed('#Location3', figure_3_spec); //Practice of adding a chart to the second section created
          vegaEmbed('#moneysupplychart', 'Week 2/m2_line_chart.json') //Week 2. Vega lite chart 
-         vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json' ) //Week 3. Altair chart - Office hour to fix the issue 
+         //vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json') //Week 3. Altair chart - Office hour to fix the issue
+         vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
          vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
 
 
