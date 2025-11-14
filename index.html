@@ -48,8 +48,8 @@
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Your Name | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
+        Noura Coulibaly | <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/">LinkedIn</a> | <a
+            href="https://github.com/Noura-23">GitHub</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
         This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.
@@ -112,6 +112,16 @@
         <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
+           <section>
+        <div class="chart-description">
+            <h2>Week 7: UK Airports Layered Map  </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                A map produced using GeoJson. Use of Layered composition. 
+            </p>
+        </div>
+        <figure id="UK_Map"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -127,13 +137,18 @@
         //let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig3_uk-oil-prices.json" //Example of how to add a chart to the website 
 
         let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json"; //1.Practice of adding a second chart to the second section created using its raw link 
+        
         //let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
         let figure_3_spec = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/fig5_productivity-itl3.json";
 
-        let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
         //let pe_chart_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/shiller_pe_ratio_chart.json"; 
+        let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
 
         let TFR_chart_path = "Week 4/TFR_live_chart.json";
+
+        //let UK_Map_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/DS7_6_UK_Airports_Layered.json";
+        let UK_Map_path = "Week 7/DS7_6_UK_Airports_Layered.json";
+        
 
 
         // Do you want to add more graphs?
@@ -149,6 +164,7 @@
          //vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json') //Week 3. Altair chart - Office hour to fix the issue
          vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
          vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
+         vegaEmbed ('#UK_Map', UK_Map_path) //Week 7. Maps 
 
 
          //Week 5. Practice doing a loop.
