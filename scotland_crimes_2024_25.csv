@@ -1,35 +1,33 @@
-Local Authority,Number of crimes,
-Aberdeen City,14319,
-Aberdeenshire,7670,
-Angus,4688,
-Argyll & Bute,3469,
-Clackmannanshire,2645,
-Dumfries & Galloway,7774,
-Dundee City,11771,
-East Ayrshire,6434,
-East Dunbartonshire,2641,
-East Lothian,4757,
-East Renfrewshire,2602,
-"Edinburgh, City of",38116,
-Falkirk,8032,
-Fife,18901,
-Glasgow City,52406,
-Highland,10256,
-Inverclyde,4032,
-Midlothian,4953,
-Moray,3955,
-Na h-Eileanan Siar,572,
-North Ayrshire,7598,
-North Lanarkshire,19384,
-Orkney Islands,515,
-Perth & Kinross,6069,
-Renfrewshire,9667,
-Scottish Borders,4554,
-Shetland Islands,414,
-South Ayrshire,5167,
-South Lanarkshire,16150,
-Stirling,3732,
-West Dunbartonshire,5832,
-West Lothian,10036,
-,,
-,,
+Local Authority,Number of crimes
+Aberdeen City,14319
+Aberdeenshire,7670
+Angus,4688
+Argyll and Bute,3469
+Clackmannanshire,2645
+Dumfries and Galloway,7774
+Dundee City,11771
+East Ayrshire,6434
+East Dunbartonshire,2641
+East Lothian,4757
+East Renfrewshire,2602
+City of Edinburgh,38116
+Falkirk,8032
+Fife,18901
+Glasgow City,52406
+Highland,10256
+Inverclyde,4032
+Midlothian,4953
+Moray,3955
+Na h-Eileanan Siar,572
+North Ayrshire,7598
+North Lanarkshire,19384
+Orkney Islands,515
+Perth and Kinross,6069
+Renfrewshire,9667
+Scottish Borders,4554
+Shetland Islands,414
+South Ayrshire,5167
+South Lanarkshire,16150
+Stirling,3732
+West Dunbartonshire,5832
+West Lothian,10036
