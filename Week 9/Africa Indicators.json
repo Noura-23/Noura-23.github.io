@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 250,
+  "height": 300,
+  "params": [
+    {
+      "name": "SelectParam",
+      "value": "Electricity Access",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Electricity Access",
+          "Electric Power Consumption",
+          "Population",
+          "GDP per Capita"
+        ],
+        "name": "Select series:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
+        "format": {"property": "features"}
+      },
+      "mark": {"type": "geoshape", "color": "lightgrey", "stroke": "white", "strokeWidth":"0.3"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
+        "format": {"property": "features"}
+      },
+      "title": {
+        "text": "Africa Indicators",
+        "fontSize": 12,
+        "subtitle": [],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "middle",
+        "color": "black"
+      },
+      "projection": {"type": "mercator"},
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.3},
+      "transform": [
+        {
+          "lookup": "properties.iso_a3",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_indicators.csv"
+            },
+            "key": "iso",
+            "fields": [
+              "Electricity Access",
+              "Electric Power Consumption",
+              "Population",
+              "GDP per Capita",
+              "name"
+            ]
+          }
+        },
+        {"calculate": "datum[SelectParam]", "as": "varSelected"}
+      ],
+      "encoding": {
+        "color": {
+          "field": "varSelected",
+          "legend": {
+            "title": "",
+            "direction": "vertical"
+          },
+          "type": "quantitative",
+          "scale": {"scheme": "goldred", "reverse": false}
+        },
+        "tooltip": [
+          {"field": "varSelected", "title": "Value", "format": ","},
+          {"field": "name", "title": "Country Name"}
+        ]
+      }
+    }
+  ]
+}
