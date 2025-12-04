@@ -1,0 +1,155 @@
+/* Portfolio CSS - With Aptos Font */
+
+/* ========== GENERAL STYLING ========== */
+body {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0;
+}
+
+/* ========== HEADER SECTION ========== */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 3px solid #ddd;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', Arial, sans-serif;
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+header p {
+  color: #555;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+header nav {
+  margin-top: 20px;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  padding: 0 20px 40px 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.intro p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ========== SECTIONS (for each challenge) ========== */
+section {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', Arial, sans-serif;
+  color: black;
+  font-size: 1.75em;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  font-size: 1.25em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* ========== HEADINGS ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Aptos', 'Calibri', 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* ========== PARAGRAPHS ========== */
+p {
+  margin-bottom: 1em;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ========== CHARTS ========== */
+.chart {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* ========== LINKS ========== */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== IMAGES ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 2px solid #ddd;
+  color: #666;
+  background-color: white;
+  margin-top: 40px;
+}
+
+/* ========== UTILITY CLASSES ========== */
+.big {
+  font-size: 2.5em;
+}
+
+.small {
+  font-size: 1.25em;
+}

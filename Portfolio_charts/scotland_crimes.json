@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scotland Number of Crimes by Local Authority (2024)",
+  "width": 350,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.LAD25NM",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/scotland_crimes_2024_25.csv"
+        },
+        "key": "Local Authority",
+        "fields": ["Number of crimes", "Local Authority"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "Number of crimes",
+      "type": "quantitative",
+      "scale": {"type": "linear", "scheme": "purplered"},
+      "title": "Number of Crimes"
+    },
+    "tooltip": [
+      {
+      "field": "Local Authority", 
+      "type": "nominal", 
+      "title": "Local Authority District"
+      },
+      {
+        "field": "Number of crimes",
+        "type": "quantitative",
+        "title": "Number of Crimes"
+      }
+    ]
+  },
+  "projection": {"type": "mercator"}
+}

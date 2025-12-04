@@ -108,14 +108,11 @@
             for(let i=0; i<4; i++) {
                 // Add chartFile to base url
                 let url = baseUrl + chartFiles[i];  
-                console.log("current chart file:"+chartFiles[i])
-            
                 
                 // Make a copy of the template spec, so we can modify it for each chart.
-                let spec = JSON.parse(JSON.stringify(templateSpec));
+                let spec = templateSpec;
                 spec.data.url = url;   // Set the data url
                 spec.title.text = chartFiles[i].split('-')[1].split('.')[0];     // Extract just the series code from the file name, so set as title.
-
 
                 // Print the spec to the console (helpful for debugging)
                 console.log(spec);

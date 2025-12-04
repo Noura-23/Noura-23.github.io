@@ -112,7 +112,7 @@
         <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
-    <section>
+           <section>
         <div class="chart-description">
             <h2>Week 7: UK Airports Layered Map  </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
@@ -121,16 +121,6 @@
         </div>
         <figure id="UK_Map"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
-    <section>
-        <div class="chart-description">
-            <h2>Week 8: Milk Prices  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Big Data seminar. Chart created using Python.  
-            </p>
-        </div>
-        <figure id="milk_prices"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-    
 
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -158,8 +148,6 @@
 
         //let UK_Map_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/DS7_6_UK_Airports_Layered.json";
         let UK_Map_path = "Week 7/DS7_6_UK_Airports_Layered.json";
-
-        let milk_prices_path = "Week 8/wk8_milkprices_chart.json";
         
 
 
@@ -177,7 +165,6 @@
          vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
          vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
          vegaEmbed ('#UK_Map', UK_Map_path) //Week 7. Maps 
-         vegaEmbed('#milk_prices', milk_prices_path) //Week 8. Milk Prices 
 
 
          //Week 5. Practice doing a loop.

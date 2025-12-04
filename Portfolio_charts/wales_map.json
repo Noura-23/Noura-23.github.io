@@ -1,18 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Map showing Scottish Local Authority District boundaries using 2025 administrative boundaries.",
-  "title": "Scotland Local Authorities",
+  "title": "Wales Local Authorities",
   "width": 300,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
     "format": {"type": "topojson", "feature": "object_name"}
   },
   "mark": {
     "type": "geoshape",
-    "fill": "lightblue",
+    "fill": "lightcoral",
     "stroke": "white",
-    "strokeWidth": 0.5
+    "strokeWidth": 0.3
   },
   "encoding": {
     "tooltip": {
