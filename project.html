@@ -1,227 +1,320 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
+<html lang="en">
 
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Energy Africas | Noura Coulibaly</title>
 
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
-    <link rel="stylesheet" type="text/css" href="Example3.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <!-- Vega-Lite for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+    <!-- Link to CSS file (to be created) -->
+    <link rel="stylesheet" type="text/css" href="project.css">
 </head>
 
-<body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Noura Coulibaly
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Noura Coulibaly | <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/">LinkedIn</a> | <a
-            href="https://github.com/Noura-23">GitHub</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.
-        Noura Coulibaly  
-    </h3>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Three Energy Africas</h1>
+        <h2>Understanding Diverging Energy Trajectories in Sub-Saharan Africa</h2>
+        <p>Noura Coulibaly | PP434 Data Visualization Portfolio Project</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/">LinkedIn</a>
+            <a href="https://github.com/Noura-23">GitHub</a>
+        </nav>
+    </header>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <h2>Project Overview</h2>
+        <p>
+            This project challenges conventional narratives about electricity access in Sub-Saharan Africa by examining
+            how structural choices, institutional capacity, and resource allocation strategies create diverging energy
+            trajectories across the continent. Rather than treating SSA as a monolithic region, this analysis reveals
+            three distinct "Energy Africas" emerging from fundamentally different approaches to power system development.
+        </p>
+        <p>
+            The analysis moves beyond simple access metrics to explore the hidden dimensions of energy systems,
+            including the parallel diesel-powered economy, the relationship between institutional capacity and
+            investment flows, and the critical question of whether renewable energy is actually closing the electricity
+            gap or simply creating new forms of energy inequality.
+        </p>
     </section>
 
-     <section>
-        <div class="chart-description">
-            <h2>Section 2: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <h3> Graph 1</h3> 
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <h3> Graph 2</h3> 
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <!-- Main Content -->
+    <main>
 
-    <section>
-        <div class="chart-description">
-            <h2>Week 2: Money Supply </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                My first Vega-lite chart: M2 money supply. Source M2SL from FRED
-            </p>
-        </div>
-        <figure id="moneysupplychart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Week 3: Price-earnings ratio </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A simple altair line chart, produced with Shiller data and cleaned with python pandas.
-            </p>
-        </div>
-        <figure id="pe_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-       <section>
-        <div class="chart-description">
-            <h2>Week 4: South Africa and Lesotho Total Fertility Rate  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A chart produced using API method and data from the World Bank.
-            </p>
-        </div>
-        <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-           <section>
-        <div class="chart-description">
-            <h2>Week 7: UK Airports Layered Map  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A map produced using GeoJson. Use of Layered composition. 
-            </p>
-        </div>
-        <figure id="UK_Map"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-
-
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
-    <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        //let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig3_uk-oil-prices.json" //Example of how to add a chart to the website 
-
-        let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json"; //1.Practice of adding a second chart to the second section created using its raw link 
-        
-        //let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
-        let figure_3_spec = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/fig5_productivity-itl3.json";
-
-        //let pe_chart_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/shiller_pe_ratio_chart.json"; 
-        let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
-
-        let TFR_chart_path = "Week 4/TFR_live_chart.json";
-
-        //let UK_Map_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/DS7_6_UK_Airports_Layered.json";
-        let UK_Map_path = "Week 7/DS7_6_UK_Airports_Layered.json";
-        
-
-
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
-
-         vegaEmbed('#Location1', figure_1_spec); // We're using the vegaEmbed function to put a graph in the element with id figure_1
-         vegaEmbed('#Location2', figure_2_spec); //Practice of adding a chart to the second section created 
-         vegaEmbed('#Location3', figure_3_spec); //Practice of adding a chart to the second section created
-         vegaEmbed('#moneysupplychart', 'Week 2/m2_line_chart.json') //Week 2. Vega lite chart 
-         //vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json') //Week 3. Altair chart - Office hour to fix the issue
-         vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
-         vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
-         vegaEmbed ('#UK_Map', UK_Map_path) //Week 7. Maps 
-
-
-         //Week 5. Practice doing a loop.
-         //Loop: help not repeating a code
-         
-            //without a loop.
-         console.log("0")
-         console.log("1")
-         console.log("2")
-         console.log("3")  
-
-            //with loop 
-        //Example 1 
-         for (let i = 0; i < 4; i++){
-            console.log("Testing")
-            console.log(i)
-         } //i: variable that will change; i<4: do it until i reach 3; i++: increase i by 1. Console ?? use to put together charts ?? 
-
-         let cities = ["London", "Paris", "Milan", "Tokyo"]
-         
-         console.log("The first city is "+cities[0])
-
-         for (let i = 0; i < 4; i++){
-            console.log(cities[i])
-         }
-
-         //Example 2 
-         let chart_specs = [
-            "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json",
-            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json",
-            "Week 4/TFR_live_chart.json"
-         ]
-
-         let chart_desinations = [
-            "#Location1",
-            "#Location2",
-            "#TFR_chart"
-         ]
-
-         for (let i = 0; i < 4; i++){
-            console.log("Chart spec at: "+chart_specs[i]) //console log use to print 
-            console.log("Chart destination at: "+chart_desinations[i])
-            vegaEmbed(chart_desinations[i], chart_specs[i])
-         }
+        <!-- Chart 1: Three-Tier Classification System -->
+        <section class="chart-section">
+            <h2>Chart 1: The Three Energy Africas</h2>
+            <h3>A Framework for Understanding Diverging Energy Trajectories</h3>
             
+            <figure id="chart1"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This interactive classification system categorizes SSA countries into three distinct
+                    groups - High Performers, Transition Economies, and Lagging Energy Systems. Users can toggle between
+                    different metrics (access rates, per capita consumption, generator dependence) to see how countries
+                    sort across different dimensions of energy performance. The visualization demonstrates that these
+                    categories represent fundamentally different energy systems, not just different stages of the same
+                    development path.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: How the three tiers differ across multiple dimensions]</li>
+                    <li>[Insight 2: Why these represent structural differences, not just development stages]</li>
+                    <li>[Insight 3: The relationship between institutional capacity and energy system performance]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> World Bank Global Power Market Structures Database,
+                    IRENA Renewable Energy Statistics, National Utility Reports</p>
+            </div>
+        </section>
 
+        <!-- Chart 2: The Invisible Diesel Economy -->
+        <section class="chart-section">
+            <h2>Chart 2: The Parallel Power System</h2>
+            <h3>Mapping Sub-Saharan Africa's Hidden Diesel Economy</h3>
+            
+            <figure id="chart2"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This visualization reveals the scale of diesel generator dependence across SSA,
+                    showing generator ownership rates, estimated private generation capacity, and the gap between
+                    official grid statistics and actual electricity access. The chart exposes how official access rates
+                    mask a parallel energy system where businesses and households rely on expensive, polluting diesel
+                    generators due to grid unreliability.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: The scale of generator dependence versus official grid access]</li>
+                    <li>[Insight 2: Economic costs of the parallel diesel system]</li>
+                    <li>[Insight 3: Why grid expansion alone doesn't solve the energy crisis]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> World Bank Enterprise Surveys, ESMAP Multi-Tier
+                    Framework, IEA Africa Energy Outlook</p>
+            </div>
+        </section>
 
+        <!-- Chart 3: Investment Follows Institutions -->
+        <section class="chart-section">
+            <h2>Chart 3: Where the Money Goes</h2>
+            <h3>The Relationship Between Institutional Capacity and Energy Investment</h3>
+            
+            <figure id="chart3"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This chart examines renewable energy investment flows across the three categories,
+                    showing that investment gravitates toward countries with strong institutional capacity rather than
+                    those with the greatest need or best renewable resources. The visualization demonstrates the
+                    self-reinforcing nature of institutional strength and capital access.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: Investment patterns across the three tiers]</li>
+                    <li>[Insight 2: The gap between resource potential and actual investment]</li>
+                    <li>[Insight 3: Why institutional capacity matters more than resource endowment]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> IRENA Investment Tracking, World Bank Regulatory
+                    Indicators for Sustainable Energy (RISE), Bloomberg New Energy Finance</p>
+            </div>
+        </section>
 
+        <!-- Chart 4: The Grid Reliability Crisis -->
+        <section class="chart-section">
+            <h2>Chart 4: Beyond Access Metrics</h2>
+            <h3>Power Outages, Technical Losses, and the Quality of Electricity Service</h3>
+            
+            <figure id="chart4"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This multi-metric comparison reveals that having grid access doesn't mean having
+                    reliable electricity. The chart compares outage frequency, duration, technical and commercial
+                    losses, and collection rates across the three categories, showing how operational performance varies
+                    dramatically even among countries with similar access rates.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: The gap between access and reliability across categories]</li>
+                    <li>[Insight 2: How technical losses undermine system viability]</li>
+                    <li>[Insight 3: The vicious cycle of poor service, low payment, and deteriorating infrastructure]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> World Bank Enterprise Surveys, Utility Performance
+                    Reports, ESMAP Database</p>
+            </div>
+        </section>
+
+        <!-- Chart 5: Centralized vs Decentralized Pathways -->
+        <section class="chart-section">
+            <h2>Chart 5: Two Paths Forward</h2>
+            <h3>Grid Extension vs. Decentralized Renewables in Closing the Energy Gap</h3>
+            
+            <figure id="chart5"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This visualization compares the trajectory of grid extension versus decentralized
+                    renewable deployment (mini-grids, solar home systems) across countries, examining which approach is
+                    actually closing the access gap. The chart challenges assumptions about renewable energy as the
+                    primary solution by showing where and why different pathways succeed or fail.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: Relative contribution of grid extension vs. off-grid solutions to access gains]</li>
+                    <li>[Insight 2: Why decentralized solutions haven't scaled as expected]</li>
+                    <li>[Insight 3: The real debate - centralized vs. decentralized, not fossil vs. renewable]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> ESMAP Mini-Grids Database, GOGLA Off-Grid Solar
+                    Market Trends, National Electrification Plans</p>
+            </div>
+        </section>
+
+        <!-- Chart 6: The Affordability Constraint -->
+        <section class="chart-section">
+            <h2>Chart 6: The Cost Barrier</h2>
+            <h3>Electricity Tariffs, Income Levels, and the Affordability Crisis</h3>
+            
+            <figure id="chart6"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This chart examines the relationship between electricity tariffs, per capita income,
+                    and consumption patterns, revealing how affordability constraints limit the impact of access
+                    improvements. Even where grid connections exist, many households cannot afford to use meaningful
+                    amounts of electricity, creating an "access without use" problem.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: Tariff levels relative to income across the three categories]</li>
+                    <li>[Insight 2: The gap between connection and meaningful consumption]</li>
+                    <li>[Insight 3: Why subsidies alone don't solve the affordability problem]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> World Bank Tariff Database, ESMAP Multi-Tier
+                    Framework, National Household Surveys</p>
+            </div>
+        </section>
+
+        <!-- Chart 7: Breaking the Cycle -->
+        <section class="chart-section">
+            <h2>Chart 7: Pathways to Transition</h2>
+            <h3>What Separates High Performers from Lagging Systems</h3>
+            
+            <figure id="chart7"></figure>
+            
+            <div class="chart-description">
+                <h4>Description</h4>
+                <p>
+                    [Placeholder: This final chart synthesizes key factors that distinguish successful energy
+                    transitions from stagnating systems, examining the interplay of regulatory quality, technical
+                    capacity, financial sustainability, and political commitment. The visualization identifies leverage
+                    points where policy interventions could help Transition Economies avoid becoming Lagging Systems.]
+                </p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li>[Insight 1: Common characteristics of successful energy sector reforms]</li>
+                    <li>[Insight 2: Critical junctures where trajectories diverge]</li>
+                    <li>[Insight 3: Policy recommendations for breaking the low-capacity, low-investment trap]</li>
+                </ul>
+                
+                <p class="data-source"><strong>Data Source:</strong> World Bank RISE Indicators, IMF Energy Subsidy
+                    Database, Country Case Studies</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion-section">
+        <h2>Conclusion: Beyond the Access Narrative</h2>
+        <p>
+            [Placeholder: Summary paragraph synthesizing the main argument - that SSA's energy challenge isn't simply
+            about closing an access gap through renewable deployment, but about addressing fundamental structural
+            differences in institutional capacity, system reliability, and financial sustainability that create
+            diverging energy trajectories. The real policy question isn't renewable vs. fossil fuel, but how to build
+            institutional capacity that enables any energy system to function effectively.]
+        </p>
+        <p>
+            [Placeholder: Final paragraph on implications for policy and development practice, emphasizing the need to
+            move beyond one-size-fits-all approaches and recognize that different "Energy Africas" require fundamentally
+            different strategies.]
+        </p>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section">
+        <h2>Methodology & Data Sources</h2>
+        <p>
+            [Placeholder: Brief description of analytical approach, data cleaning and processing methods, key
+            assumptions, and limitations. Acknowledge data gaps particularly around decentralized solutions and
+            operational performance metrics.]
+        </p>
         
+        <h3>Primary Data Sources</h3>
+        <ul>
+            <li>World Bank Global Power Market Structures Database</li>
+            <li>IRENA Renewable Energy Statistics and Investment Tracking</li>
+            <li>ESMAP Energy Access Database and Multi-Tier Framework</li>
+            <li>World Bank Enterprise Surveys</li>
+            <li>IEA Africa Energy Outlook</li>
+            <li>National Utility Performance Reports</li>
+            <li>GOGLA Off-Grid Solar Market Trends</li>
+        </ul>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>Created by Noura Coulibaly for PP434 - Automated Visualisation for Policymaking</p>
+        <p>Data Visualization Portfolio Project | 2024-2025</p>
+    </footer>
 
+    <!-- JavaScript for embedding charts -->
+    <script>
+        // Chart file paths - update these with your actual chart file locations
+        let chart1_path = "charts/chart1_three_tiers.json";
+        let chart2_path = "charts/chart2_diesel_economy.json";
+        let chart3_path = "charts/chart3_investment_institutions.json";
+        let chart4_path = "charts/chart4_reliability_crisis.json";
+        let chart5_path = "charts/chart5_centralized_decentralized.json";
+        let chart6_path = "charts/chart6_affordability.json";
+        let chart7_path = "charts/chart7_pathways_transition.json";
 
-
-
-
+        // Embed all charts
+        vegaEmbed('#chart1', chart1_path);
+        vegaEmbed('#chart2', chart2_path);
+        vegaEmbed('#chart3', chart3_path);
+        vegaEmbed('#chart4', chart4_path);
+        vegaEmbed('#chart5', chart5_path);
+        vegaEmbed('#chart6', chart6_path);
+        vegaEmbed('#chart7', chart7_path);
     </script>
 
 </body>
-    
+
 </html>
