@@ -12,7 +12,7 @@
       "lookup": "properties.LAD25NM",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/scotland_crimes_2024_25.csv"
+          "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_charts/scotland_crimes_2024_25.csv"
         },
         "key": "Local Authority",
         "fields": ["Number of crimes", "Local Authority"]
