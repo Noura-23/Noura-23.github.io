@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "South Africa and Lesotho's Total fertility rates",
+    "subtitle": "Source: UN Population Division via World Bank"
+  },
+  "mark": "line",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/za;ls/indicator/SP.DYN.TFRT.IN?format=json&per_page=200",
+    "format": {"property": "[1]"}
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "color": {"field": "countryiso3code", "title": "Country"},
+    "y": {"field": "value", "type": "quantitative", "title": "TFR"}
+  }
+}
