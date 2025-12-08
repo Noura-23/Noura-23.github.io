@@ -206,183 +206,83 @@
         </script>
 
         <!-- CC8. Big Data. Extracting a story from millions of prices.-->
+         <section>
+            <div>
+                <h2>CC8. Big Data. Extracting a story from millions of prices.</h2>
+                <p>
+                    <b>Task:</b> Produce two charts using either of the two UK prices datasets provided in class.
+                    Both charts can be from the same database, or you can produce one from each.
+                </p>
+            </div>
+            <h3><b>Chart 1.</b></h3>
+            <figure id="cc8_1"></figure> <!-- Need to look chart -->
+            <p>
+                <!-- Line break -->
+            </p>
+            <h3><b>Chart 2.</b></h3>
+            <figure id="cc8_1"></figure> <!-- Need to look chart -->
+         </section>
+         <script>
+            let cc8_1_path = "";
+            let cc8_2_path = "";
+            vegaEmbed('#cc8_1', cc8_1_path);
+            vegaEmbed('#cc8_1', cc8_2_path);
+         </script>
 
         <!-- CC9. Interactive charts. Analytics charts. -->
+         <section>
+            <div>
+                <h2>CC9. Interactive charts. Analytics charts.</h2>
+                <p>
+                    <b>Task:</b> Produce two charts that include interactivity.
+                </p>
+            </div>
+            <h3><b>Chart 1.</b></h3>
+            <figure id="cc9_1"></figure>
+            <p>
+                <!-- Line break -->
+            </p>
+            <h3><b>Chart 2.</b></h3>
+            <figure id="cc9_2"></figure> <!-- Need to look chart -->
+         </section>
+         <script>
+            let cc9_1_path = "Projects_charts/Africa_map.json";
+            let cc9_2_path = "";
+            vegaEmbed('#cc9_1', cc9_1_path);
+            vegaEmbed('#cc9_2', cc9_2_path);
+         </script>
 
-        <!-- CC10. -->
+        <!-- CC10. Advanced Analysis and Machine Learning. -->
+        <section>
+            <div>
+                <h2>CC10. Advanced Analysis and Machine Learning.</h2>
+                <p>
+                    <b>Task 1: Advanced analytics chart</b> Produce a chart that uses more advanced analytics that standard line,
+                    bar or scatter charts. 
+                </p>
+            </div>
+            <h3><b>Chart 1.</b></h3>
+            <figure id="cc10_1"></figure> <!-- Need to look chart -->
+            <p>
+                <!-- Line break -->
+            </p>
+            <div>
+                <p>
+                    <b>Task 2: Machine learning</b> Conduct an applied data analysis using any of the machine learning
+                    techniques taught in the Week 10 lecture and seminar.
+                </p>
+            </div>
+            <h3><b>Chart 2.</b></h3>
+            <figure id="cc10_2"></figure> <!-- Need to look chart -->
+        </section>
+        <script>
+            let cc10_1_path = "";
+            let cc10_2_path = "";
+            vegaEmbed('#cc10_1', cc10_1_path);
+            vegaEmbed('#cc10_2', cc10_2_path);
+        </script>
 
     </main>
-
-
-
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description.
-                Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description.
-                Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <h3> Graph 1</h3>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <h3> Graph 2</h3>
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Week 2: Money Supply </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                My first Vega-lite chart: M2 money supply. Source M2SL from FRED
-            </p>
-        </div>
-        <figure id="moneysupplychart"></figure>
-        <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Week 3: Price-earnings ratio </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A simple altair line chart, produced with Shiller data and cleaned with python pandas.
-            </p>
-        </div>
-        <figure id="pe_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Week 4: South Africa and Lesotho Total Fertility Rate </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A chart produced using API method and data from the World Bank.
-            </p>
-        </div>
-        <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Week 7: UK Airports Layered Map </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A map produced using GeoJson. Use of Layered composition.
-            </p>
-        </div>
-        <figure id="UK_Map"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
-    <!-- Do you want to add more sections? -->
-    <!-- Try copying pasting the section above -->
-    <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-    <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-
-
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
-    <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        //let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig3_uk-oil-prices.json" //Example of how to add a chart to the website 
-
-        let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json"; //1.Practice of adding a second chart to the second section created using its raw link 
-
-        //let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
-        let figure_3_spec = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/fig5_productivity-itl3.json";
-
-        //let pe_chart_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/shiller_pe_ratio_chart.json"; 
-        let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json";
-
-        let TFR_chart_path = "Week 4/TFR_live_chart.json";
-
-        //let UK_Map_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/DS7_6_UK_Airports_Layered.json";
-        let UK_Map_path = "Week 7/DS7_6_UK_Airports_Layered.json";
-
-
-
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
-
-        vegaEmbed('#Location1', figure_1_spec); // We're using the vegaEmbed function to put a graph in the element with id figure_1
-        vegaEmbed('#Location2', figure_2_spec); //Practice of adding a chart to the second section created 
-        vegaEmbed('#Location3', figure_3_spec); //Practice of adding a chart to the second section created
-        vegaEmbed('#moneysupplychart', 'Week 2/m2_line_chart.json') //Week 2. Vega lite chart 
-        //vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json') //Week 3. Altair chart - Office hour to fix the issue
-        vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
-        vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
-        vegaEmbed('#UK_Map', UK_Map_path) //Week 7. Maps 
-
-
-        //Week 5. Practice doing a loop.
-        //Loop: help not repeating a code
-
-        //without a loop.
-        console.log("0")
-        console.log("1")
-        console.log("2")
-        console.log("3")
-
-        //with loop 
-        //Example 1 
-        for (let i = 0; i < 4; i++) {
-            console.log("Testing")
-            console.log(i)
-        } //i: variable that will change; i<4: do it until i reach 3; i++: increase i by 1. Console ?? use to put together charts ?? 
-
-        let cities = ["London", "Paris", "Milan", "Tokyo"]
-
-        console.log("The first city is " + cities[0])
-
-        for (let i = 0; i < 4; i++) {
-            console.log(cities[i])
-        }
-
-        //Example 2 
-        let chart_specs = [
-            "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json",
-            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json",
-            "Week 4/TFR_live_chart.json"
-        ]
-
-        let chart_desinations = [
-            "#Location1",
-            "#Location2",
-            "#TFR_chart"
-        ]
-
-        for (let i = 0; i < 4; i++) {
-            console.log("Chart spec at: " + chart_specs[i]) //console log use to print 
-            console.log("Chart destination at: " + chart_desinations[i])
-            vegaEmbed(chart_desinations[i], chart_specs[i])
-        }
-
-
-
-
-
-
-
-
-
-
-
-    </script>
 
 </body>
 
