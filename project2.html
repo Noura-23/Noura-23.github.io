@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa's Electricity Crisis - Six Uncomfortable Truths</title>
+    
+    <!-- Vega, Vega-Lite, and Vega-Embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    
+    <!-- Link to external CSS (to be created) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Africa's Electricity Crisis</h1>
+            <h2 class="hero-subtitle">Six Uncomfortable Truths</h2>
+            <p class="hero-description">[PLACEHOLDER: 2-3 sentence overview of what this project reveals about SSA's electricity crisis and why it matters]</p>
+            <div class="scroll-indicator">↓ Scroll to explore</div>
+        </div>
+    </section>
+
+    <!-- PROJECT AIMS -->
+    <section class="project-section intro-section">
+        <div class="content-wrapper">
+            <h2 class="section-heading">Aims</h2>
+            <p class="section-text">[PLACEHOLDER: ~150 words describing the goal of this project - challenging access percentages as the primary metric, revealing hidden dimensions of consumption inequality, affordability barriers, and reliability failures. Why this reframing matters for policy.]</p>
+        </div>
+    </section>
+
+    <!-- CHART 1: THE DIVIDE -->
+    <section class="chart-section" id="chart1">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">01</span>
+                <h2 class="chart-title">The Divide</h2>
+                <p class="chart-subtitle">Where Africa's Lights Stay On</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining what this interactive map shows. Instruction to switch between Access and Consumption to see transformation.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis1" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: Key insight about Nigeria 60% access but 156 kWh/capita vs Chad 12% access and 132 kWh/capita. The disconnect between access and consumption. Southern Africa clustering at 3,000-4,000 kWh/capita vs West Africa <200 kWh/capita despite similar access rates.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: World Bank World Development Indicators - Electricity access (% population) and Electric power consumption (kWh per capita), 2022-2023]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHART 2: LIVING ON 3 LIGHTBULBS -->
+    <section class="chart-section" id="chart2">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">02</span>
+                <h2 class="chart-title">Living on 3 Lightbulbs</h2>
+                <p class="chart-subtitle">What Africa's Electricity Actually Powers</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining consumption inequality. Reference lines show what different kWh levels enable in daily life - from basic lighting to productive use.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis2" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: 23 of 25 SSA countries below 1,000 kWh/capita World Bank threshold. Chad 132 kWh = 3 hours lighting per day. Nigeria 156 kWh for 220M people = can't power fridge continuously. South Africa 3,900 kWh = 30× more than Chad. Most connected Africans live in pre-refrigeration conditions.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: World Bank WDI / IEA Statistics - Electric power consumption per capita (kWh), 2022-2023]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHART 3: THE INJUSTICE -->
+    <section class="chart-section" id="chart3">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">03</span>
+                <h2 class="chart-title">The Injustice</h2>
+                <p class="chart-subtitle">Poorest Countries Pay 4× More for Electricity</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining the affordability paradox. Poorest populations pay highest tariffs, creating poverty trap. Hours of work needed to afford electricity.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis3" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: Liberia $0.40/kWh at $1.70/day income = 24% daily income per kWh. Sierra Leone $0.35/kWh at $2.10/day = 17%. South Africa $0.12/kWh at $16/day = 0.75%. A Liberian works 4 hours to afford what South African buys in 5 minutes. Weak utilities can't achieve scale economies, creating poverty trap: low consumption → high costs → unaffordable tariffs → lower consumption.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: World Bank WDI (GDP per capita PPP), IEA / National Regulators (electricity tariffs $/kWh), 2022-2023]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHART 4: THE HIDDEN ECONOMY -->
+    <section class="chart-section" id="chart4">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">04</span>
+                <h2 class="chart-title">The Hidden Economy</h2>
+                <p class="chart-subtitle">When the Grid Fails, Africa Generates Its Own Power</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining the parallel diesel economy. Grid unreliability forces businesses to self-generate using expensive, polluting diesel generators. This invisible system doesn't appear in official statistics.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis4" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: Nigeria businesses generate ~43% as much electricity as national grid via diesel. Liberia, Sierra Leone show 70-80% firms own generators. Hidden costs: diesel $0.30-0.50/kWh vs grid $0.10-0.15/kWh, raising production costs and pricing African manufacturers out of global markets. Environmental impact: diesel emits 2-3× more CO₂ per kWh than grid, canceling renewable gains. Grid failure forces invisible, inefficient, polluting parallel energy system.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: IEA / World Bank (official grid generation GWh), World Bank Enterprise Surveys (% firms owning backup generators), diesel estimates calculated from firm ownership rates]</p>
+            </div>
+            
+            <div class="chart-methodology">
+                <h3 class="methodology-heading">Methodology Note</h3>
+                <p>[PLACEHOLDER: Explanation of how diesel generation was estimated from Enterprise Survey data on generator ownership. Formula used, assumptions made, cross-validation with diesel import statistics where available.]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHART 5: THE PARADOX -->
+    <section class="chart-section" id="chart5">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">05</span>
+                <h2 class="chart-title">The Paradox</h2>
+                <p class="chart-subtitle">Africa Has the Sun, Not the Solar</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining the resource vs. deployment disconnect. Africa has world-class solar resources but minimal deployment. This reveals policy/investment failure, not resource scarcity.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis5" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: SSA receives 5-6 kWh/m²/day solar irradiance—world's highest. Yet <15 GW total solar for 1.2B people (12W/capita) vs Germany 70 GW for 84M (830W/capita) despite 40% lower irradiance. Nigeria: 220M people, 5.5 kWh/m²/day (matching Saudi Arabia), <200 MW solar (0.9W/capita). Kenya and South Africa prove deployment possible but remain exceptions. Crisis isn't resource scarcity—Africa is sun-rich but solar-poor due to investment barriers and policy uncertainty.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: Global Solar Atlas / World Bank (solar irradiance kWh/m²/day), IRENA Renewable Capacity Statistics 2024 (installed solar PV capacity MW), World Bank (population)]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHART 6: THE DIVERGENCE -->
+    <section class="chart-section" id="chart6">
+        <div class="content-wrapper">
+            <div class="chart-header">
+                <span class="chart-number">06</span>
+                <h2 class="chart-title">The Divergence</h2>
+                <p class="chart-subtitle">Some Escaping, Others Trapped</p>
+            </div>
+            
+            <div class="chart-description">
+                <p>[PLACEHOLDER: 2-3 sentences explaining temporal divergence 2010-2023. Use the year slider to see trajectories. Some countries escaping energy poverty while others remain trapped despite GDP growth.]</p>
+            </div>
+            
+            <!-- Vega-Lite Chart Placeholder -->
+            <div id="vis6" class="visualization"></div>
+            
+            <div class="chart-insights">
+                <h3 class="insights-heading">Key Insights</h3>
+                <p class="insight-text">[PLACEHOLDER: Kenya doubled consumption 150→350 kWh through grid + off-grid programs. Rwanda tripled 50→145 kWh despite starting from genocide. Nigeria stagnated 145→160 kWh despite 4× Kenya's GDP per capita and oil revenues. Angola, DRC similar: GDP growth without electricity investment = hollow development. Gap between Escapers and Trapped widened 2010-2023, not closed. Policy determines trajectories: grid + off-grid integration (Kenya), renewable investment (Ethiopia), governance stability (Rwanda) enable escape. Resource wealth without infrastructure (Nigeria, Angola, DRC) creates traps.]</p>
+            </div>
+            
+            <div class="chart-source">
+                <p><strong>Data Source:</strong> [PLACEHOLDER: World Bank World Development Indicators - GDP per capita PPP (international $), Electric power consumption per capita (kWh), Population (millions), Annual data 2010-2023]</p>
+            </div>
+            
+            <div class="chart-methodology">
+                <h3 class="methodology-heading">Classification Methodology</h3>
+                <p>[PLACEHOLDER: Explanation of how countries were classified as "Escapers," "Steady," or "Trapped" based on electricity consumption growth relative to GDP growth 2010-2023. Formula and thresholds used.]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATA & TOOLS SECTION -->
+    <section class="project-section methods-section">
+        <div class="content-wrapper">
+            <h2 class="section-heading">Data & Tools</h2>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Data Sources</h3>
+                <p class="section-text">[PLACEHOLDER: ~200 words comprehensive overview of all data sources used: World Bank WDI (access, consumption, GDP, population 2010-2023), IEA (tariffs, generation mix), IRENA (renewable capacity 2024), World Bank Enterprise Surveys (generator ownership), Global Solar Atlas (irradiance). All publicly accessible via institutional APIs or downloadable CSVs. Data cleaning/merging process in Python using ISO country codes. Temporal alignment approach. Countries covered (35-40 SSA nations with complete data). Key methodological choices explained.]</p>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Tools & Technologies</h3>
+                <p class="section-text">[PLACEHOLDER: ~200 words on technical implementation. All visualizations built in Vega-Lite 5.x, embedded in HTML via vegaEmbed. Chart 1: parameter-driven choropleth with TopoJSON. Charts 2-4: encoding specifications with tooltips and annotations. Chart 5: bubble scatter with technology filters. Chart 6: animated temporal scatter with year slider and trajectory lines. Data processing workflow in Python (pandas, statsmodels). Link to public Google Colab notebook. All chart specifications and data files hosted on public GitHub repository for reproducibility.]</p>
+            </div>
+            
+            <div class="subsection">
+                <h3 class="subsection-heading">Analytical Approach</h3>
+                <p class="section-text">[PLACEHOLDER: Explanation of key analytical decisions - why consumption per capita preferred over total generation, how generator ownership serves as reliability proxy, regression analysis approach for Charts 3 & 6, classification methodology for temporal trajectories, handling of missing data and temporal alignment across different data update schedules.]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSIONS -->
+    <section class="project-section conclusion-section">
+        <div class="content-wrapper">
+            <h2 class="section-heading">Conclusions</h2>
+            <h3 class="conclusion-subtitle">Policy, Not Geography, Determines Outcomes</h3>
+            
+            <div class="conclusion-content">
+                <p class="section-text">[PLACEHOLDER: ~250 words on key findings and policy implications]</p>
+                
+                <div class="key-findings">
+                    <h4>Three Key Findings:</h4>
+                    <div class="finding">
+                        <span class="finding-number">1</span>
+                        <p>[PLACEHOLDER: Access percentages mislead—consumption inequality dwarfs connection inequality. South Africa 4,000 vs Chad 132 kWh/capita = 30× gap invisible in access rates. Policy should target minimum consumption thresholds (500 kWh/capita for basic productive use) not just connection counts.]</p>
+                    </div>
+                    
+                    <div class="finding">
+                        <span class="finding-number">2</span>
+                        <p>[PLACEHOLDER: Affordability and reliability crises render connections unusable. Liberia $0.40/kWh for <$4/day populations, Nigeria 78% firms self-generating. Tariff reform (cross-subsidies, lifeline rates) and reliability investment (grid maintenance) matter more than expanding unreliable, unaffordable systems.]</p>
+                    </div>
+                    
+                    <div class="finding">
+                        <span class="finding-number">3</span>
+                        <p>[PLACEHOLDER: Investment follows institutional capacity not resource potential. Nigeria's renewable underinvestment despite 5.5 kWh/m²/day reflects policy failure not technical constraint. Chart 6 temporal dimension shows gaps widened 2010-2023 not converged—some escaped (Kenya, Rwanda) through grid + off-grid strategies, others stagnated (Nigeria, DRC) despite GDP growth. Electricity-GDP decoupling confirms energy as binding growth constraint.]</p>
+                    </div>
+                </div>
+                
+                <div class="policy-implications">
+                    <h4>Policy Implications:</h4>
+                    <p>[PLACEHOLDER: International development frameworks (SDG7, AfDB New Deal on Energy) should incorporate consumption, affordability, and reliability metrics alongside access targets. Otherwise we celebrate 100% connections while populations remain energy-poor. Need differentiated strategies: grid extension where viable, off-grid solutions where cost-effective, but always with focus on sufficiency not just access.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="content-wrapper">
+            <p class="footer-text">Data Science Portfolio Project | PP434 - Automated Visualisation for Policymaking</p>
+            <p class="footer-links">
+                <a href="[PLACEHOLDER: GitHub repo URL]" target="_blank">GitHub Repository</a> | 
+                <a href="[PLACEHOLDER: Colab notebook URL]" target="_blank">Data Processing Notebook</a> | 
+                <a href="[PLACEHOLDER: Portfolio page URL]">Back to Portfolio</a>
+            </p>
+            <p class="footer-credit">Created by [Your Name] | December 2024</p>
+        </div>
+    </footer>
+
+    <!-- Vega-Embed Scripts for Each Chart -->
+    <script>
+        // Chart 1: The Divide - Interactive Choropleth Map
+        vegaEmbed('#vis1', 'charts/chart1_map.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+
+        // Chart 2: Living on 3 Lightbulbs - Horizontal Bar Chart
+        vegaEmbed('#vis2', 'charts/chart2_consumption_bar.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+
+        // Chart 3: The Injustice - Affordability Scatter
+        vegaEmbed('#vis3', 'charts/chart3_affordability_scatter.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+
+        // Chart 4: The Hidden Economy - Grouped Bar Chart
+        vegaEmbed('#vis4', 'charts/chart4_hidden_economy.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+
+        // Chart 5: The Paradox - Solar Resource vs Deployment Bubble
+        vegaEmbed('#vis5', 'charts/chart5_solar_paradox.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+
+        // Chart 6: The Divergence - Animated Temporal Scatter
+        vegaEmbed('#vis6', 'charts/chart6_temporal_divergence.json', {
+            actions: false,
+            renderer: 'canvas'
+        }).catch(console.error);
+    </script>
+
+</body>
+</html>
