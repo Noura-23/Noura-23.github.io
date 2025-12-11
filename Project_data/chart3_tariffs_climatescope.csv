@@ -1,0 +1,35 @@
+country,iso,tariff_usd_per_kwh,source,source_url
+Algeria,DZA,0.031,Climatescope,https://www.global-climatescope.org/markets/algeria
+Angola,AGO,0.012,Climatescope,https://www.global-climatescope.org/markets/angola
+Benin,BEN,0.20081,Climatescope,https://www.global-climatescope.org/markets/benin
+Botswana,BWA,0.111,Climatescope,https://www.global-climatescope.org/markets/botswana
+Burkina Faso,BFA,0.212,Climatescope,https://www.global-climatescope.org/markets/burkina-faso
+Burundi,BDI,0.116,Climatescope,https://www.global-climatescope.org/markets/burundi
+Cameroon,CMR,0.14704,Climatescope,https://www.global-climatescope.org/markets/cameroon
+Chad,TCD,0.16215000000000002,Climatescope,https://www.global-climatescope.org/markets/chad
+Egypt,EGY,0.036,Climatescope,https://www.global-climatescope.org/markets/egypt
+Eritrea,ERI,0.016,Climatescope,https://www.global-climatescope.org/markets/eritrea
+Ghana,GHA,0.106,Climatescope,https://www.global-climatescope.org/markets/ghana
+Guinea,GIN,0.15622999999999998,Climatescope,https://www.global-climatescope.org/markets/guinea
+Ivory Coast,CIV,0.0024,Climatescope,https://www.global-climatescope.org/markets/ivory-coast
+Kenya,KEN,0.104,Climatescope,https://www.global-climatescope.org/markets/kenya
+Lesotho,LSO,0.046,Climatescope,https://www.global-climatescope.org/markets/lesotho
+Liberia,LBR,0.00117,Climatescope,https://www.global-climatescope.org/markets/liberia
+Madagascar,MDG,0.116,Climatescope,https://www.global-climatescope.org/markets/madagascar
+Malawi,MWI,0.081,Climatescope,https://www.global-climatescope.org/markets/malawi
+Mauritania,MRT,0.015,Climatescope,https://www.global-climatescope.org/markets/mauritania
+Morocco,MAR,0.111,Climatescope,https://www.global-climatescope.org/markets/morocco
+Mozambique,MOZ,0.146,Climatescope,https://www.global-climatescope.org/markets/mozambique
+Namibia,NAM,0.032,Climatescope,https://www.global-climatescope.org/markets/namibia
+Niger,NER,0.12559,Climatescope,https://www.global-climatescope.org/markets/niger
+Nigeria,NGA,0.042,Climatescope,https://www.global-climatescope.org/markets/nigeria
+Rwanda,RWA,0.155,Climatescope,https://www.global-climatescope.org/markets/rwanda
+Senegal,SEN,0.204,Climatescope,https://www.global-climatescope.org/markets/senegal
+Sierra Leone,SLE,0.219,Climatescope,https://www.global-climatescope.org/markets/sierra-leone
+South Africa,ZAF,0.096,Climatescope,https://www.global-climatescope.org/markets/south-africa
+Tanzania,TZA,0.076,Climatescope,https://www.global-climatescope.org/markets/tanzania
+Togo,TGO,0.19305,Climatescope,https://www.global-climatescope.org/markets/togo
+Tunisia,TUN,0.0587,Climatescope,https://www.global-climatescope.org/markets/tunisia
+Uganda,UGA,0.16,Climatescope,https://www.global-climatescope.org/markets/uganda
+Zambia,ZMB,0.056,Climatescope,https://www.global-climatescope.org/markets/zambia
+Zimbabwe,ZWE,0.283,Climatescope,https://www.global-climatescope.org/markets/zimbabwe
