@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 350,
+  "params": [
+    {
+      "name": "SelectParam",
+      "value": "Electricity Access",
+      "bind": {
+        "input": "select",
+        "options": ["Electricity Access", "Electric Power Consumption"],
+        "labels": ["Access Rate (%)", "Power Consumption (kWh/capita)"],
+        "name": "Select series:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
+        "format": {"property": "features"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "color": "whitesmoke",
+        "stroke": "white",
+        "strokeWidth": "0.3"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
+        "format": {"property": "features"}
+      },
+      "title": {
+        "text": "xx",
+        "offset": 30,
+        "fontSize": 14,
+        "subtitle": [""],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "middle",
+        "color": "black"
+      },
+      "projection": {"type": "mercator"},
+      "mark": {
+        "tooltip": {
+          "expr": "SelectParam == 'Electricity Access' ? {Country:datum.name, 'Electricity Access' : datum.varSelected} : {Country:datum.name, 'Electric Power Consumption' : datum.varSelected}"
+        },
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.3
+      },
+      "transform": [
+        {
+          "lookup": "properties.iso_a3",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_indicators.csv"
+            },
+            "key": "iso",
+            "fields": [
+              "Electricity Access",
+              "Electric Power Consumption",
+              "name"
+            ]
+          }
+        },
+        {"calculate": "datum[SelectParam]", "as": "varSelected"}
+      ],
+      "encoding": {
+        "color": {
+          "field": "varSelected",
+          "legend": {"title": "", "direction": "vertical"},
+          "type": "quantitative",
+          "scale": {"scheme": "redpurple", "reverse": false}
+        }
+      }
+    }
+  ]
+}
