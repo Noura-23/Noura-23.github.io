@@ -1,0 +1,19 @@
+name: data
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - altair
+  - vl-convert-python
+  - ipykernel
+  - scikit-learn
+  - pip
+  - selenium
+  - requests
+  - beautifulsoup4
+  - openai
+  - httpx
+  - matplotlib
