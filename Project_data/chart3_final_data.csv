@@ -1,0 +1,36 @@
+name,iso,Population,region,sub-region,tariffs,"GDP per capita, PPP"
+Angola,AGO,35635029,Africa,Middle Africa,0.013,7924.888806
+Burkina Faso,BFA,22509038,Africa,Western Africa,0.222,2641.870113
+Botswana,BWA,2439892,Africa,Southern Africa,0.097,19976.83438
+Cote d'Ivoire,CIV,30395002,Africa,Western Africa,0.17,6719.443816
+Cameroon,CMR,27632771,Africa,Middle Africa,0.09,5188.977509
+"Congo, Dem. Rep.",COD,102396968,Africa,Middle Africa,0.17,1484.241169
+"Congo, Rep.",COG,6035104,Africa,Middle Africa,0.17,6647.496817
+Cabo Verde,CPV,519741,Africa,Western Africa,0.17,9481.073354
+Algeria,DZA,45477389,Africa,Northern Africa,0.044,15836.09444
+"Egypt, Arab Rep.",EGY,112618250,Africa,Northern Africa,0.022,17526.8017
+Ethiopia,ETH,125384287,Africa,Eastern Africa,0.005,2844.922745
+Gabon,GAB,2430747,Africa,Middle Africa,0.221,19992.55706
+Ghana,GHA,33149152,Africa,Western Africa,0.166,7208.15799
+Kenya,KEN,54252461,Africa,Eastern Africa,0.22,5883.22304
+Lesotho,LSO,2286110,Africa,Southern Africa,0.125,2761.31105
+Morocco,MAR,37329064,Africa,Northern Africa,0.128,9283.925781
+Madagascar,MDG,30437261,Africa,Eastern Africa,0.127,1716.978849
+Mali,MLI,23072640,Africa,Western Africa,0.236,3008.755546
+Mozambique,MOZ,32656246,Africa,Eastern Africa,0.127,1581.944194
+Mauritius,MUS,1262523,Africa,Eastern Africa,0.133,26556.07686
+Malawi,MWI,20568728,Africa,Eastern Africa,0.087,1778.305821
+Namibia,NAM,2889662,Africa,Southern Africa,0.155,10662.7017
+Nigeria,NGA,223150896,Africa,Western Africa,0.035,5948.726147
+Rwanda,RWA,13651030,Africa,Eastern Africa,0.177,3098.677006
+Sudan,SDN,49383346,Africa,Northern Africa,0.006,3355.378174
+Senegal,SEN,17651103,Africa,Western Africa,0.197,4530.220595
+Sierra Leone,SLE,8276807,Africa,Western Africa,0.253,3146.792944
+South Sudan,SSD,11021177,Africa,Eastern Africa,0.17,
+Eswatini,SWZ,1218917,Africa,Southern Africa,0.17,10665.49942
+Togo,TGO,9089738,Africa,Western Africa,0.208,2852.064429
+Tunisia,TUN,12119334,Africa,Northern Africa,0.069,13608.07258
+Tanzania,TZA,64711821,Africa,Eastern Africa,0.093,3799.862305
+Uganda,UGA,47312719,Africa,Eastern Africa,0.169,2919.177754
+South Africa,ZAF,62378410,Africa,Southern Africa,0.224,14759.43507
+Zambia,ZMB,20152938,Africa,Eastern Africa,0.019,3840.724505
