@@ -1,0 +1,36 @@
+country,iso,tariff_usd_per_kwh,source_url
+Ethiopia,ETH,0.005,https://www.globalpetrolprices.com/Ethiopia/electricity_prices/
+Sudan,SDN,0.006,https://www.globalpetrolprices.com/Sudan/electricity_prices/
+Angola,AGO,0.013,https://www.globalpetrolprices.com/Angola/electricity_prices/
+Zambia,ZMB,0.019,https://www.globalpetrolprices.com/Zambia/electricity_prices/
+Egypt,EGY,0.022,https://www.globalpetrolprices.com/Egypt/electricity_prices/
+Nigeria,NGA,0.035,https://www.globalpetrolprices.com/Nigeria/electricity_prices/
+Algeria,DZA,0.044,https://www.globalpetrolprices.com/Algeria/electricity_prices/
+Tunisia,TUN,0.069,https://www.globalpetrolprices.com/Tunisia/electricity_prices/
+Malawi,MWI,0.087,https://www.globalpetrolprices.com/Malawi/electricity_prices/
+Cameroon,CMR,0.09,https://www.globalpetrolprices.com/Cameroon/electricity_prices/
+Tanzania,TZA,0.093,https://www.globalpetrolprices.com/Tanzania/electricity_prices/
+Botswana,BWA,0.097,https://www.globalpetrolprices.com/Botswana/electricity_prices/
+Lesotho,LSO,0.125,https://www.globalpetrolprices.com/Lesotho/electricity_prices/
+Mozambique,MOZ,0.127,https://www.globalpetrolprices.com/Mozambique/electricity_prices/
+Madagascar,MDG,0.127,https://www.globalpetrolprices.com/Madagascar/electricity_prices/
+Morocco,MAR,0.128,https://www.globalpetrolprices.com/Morocco/electricity_prices/
+Mauritius,MUS,0.133,https://www.globalpetrolprices.com/Mauritius/electricity_prices/
+Namibia,NAM,0.155,https://www.globalpetrolprices.com/Namibia/electricity_prices/
+Ghana,GHA,0.166,https://www.globalpetrolprices.com/Ghana/electricity_prices/
+Uganda,UGA,0.169,https://www.globalpetrolprices.com/Uganda/electricity_prices/
+Congo Brazzaville,COG,0.17,https://www.globalpetrolprices.com/Congo-Brazzaville/electricity_prices/
+South Sudan,SSD,0.17,https://www.globalpetrolprices.com/South-Sudan/electricity_prices/
+Congo Kinshasa,COD,0.17,https://www.globalpetrolprices.com/Congo-Kinshasa/electricity_prices/
+Cote dIvoire,CIV,0.17,https://www.globalpetrolprices.com/Cote-dIvoire/electricity_prices/
+Eswatini,SWZ,0.17,https://www.globalpetrolprices.com/Eswatini/electricity_prices/
+Cabo Verde,CPV,0.17,https://www.globalpetrolprices.com/Cabo-Verde/electricity_prices/
+Rwanda,RWA,0.177,https://www.globalpetrolprices.com/Rwanda/electricity_prices/
+Senegal,SEN,0.197,https://www.globalpetrolprices.com/Senegal/electricity_prices/
+Togo,TGO,0.208,https://www.globalpetrolprices.com/Togo/electricity_prices/
+Kenya,KEN,0.22,https://www.globalpetrolprices.com/Kenya/electricity_prices/
+Gabon,GAB,0.221,https://www.globalpetrolprices.com/Gabon/electricity_prices/
+Burkina Faso,BFA,0.222,https://www.globalpetrolprices.com/Burkina-Faso/electricity_prices/
+South Africa,ZAF,0.224,https://www.globalpetrolprices.com/South-Africa/electricity_prices/
+Mali,MLI,0.236,https://www.globalpetrolprices.com/Mali/electricity_prices/
+Sierra Leone,SLE,0.253,https://www.globalpetrolprices.com/Sierra-Leone/electricity_prices/
