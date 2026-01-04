@@ -1,240 +1,123 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
+<html lang="en">
 
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+<head>
+    <title>Project</title>
 
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
-    <link rel="stylesheet" type="text/css" href="Example3.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <!-- Vega, Vega-Lite, and Vega-Embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="project3 copy.css">
 </head>
 
-<body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Noura Coulibaly
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Noura Coulibaly | <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/">LinkedIn</a> | <a
-            href="https://github.com/Noura-23">GitHub</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.
-        Noura Coulibaly  
-    </h3>
+<body>
+    <!-- PROGRESSION BAR -->
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- HEADER SECTION -->
+
+    <section class="main-header">
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-links" id="navMenu">
+                <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="project.html">PROJECT</a></li>
+                    <li><a href="https://github.com/Noura-23/Noura-23.github.io" target="_blank">GITHUB</a></li>
+                </ul>
+                <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
+            </div>
+        </nav>
+
+        <!-- Title Content -->
+        <div class="title-content">
+            <h1>Africa's Electricity Crisis</h1>
+            <h2>Six Uncomfortable Truths</h2>
+            <!--
+            <p>
+                Despite rising incomes, expanding grid connections, and abundant natural resources,
+                most Africans still consume extremely little to no electricity. This project investigates
+                why electricity deprivation persists across Africa, moving beyond access
+                statistics to examine consumption inequality, affordability barriers, grid reliability
+                failures, and long-term divergence patterns.
             </p>
+            -->
         </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
 
-     <section>
-        <div class="chart-description">
-            <h2>Section 2: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <h3> Graph 1</h3> 
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <h3> Graph 2</h3> 
-        <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <!-- SECTION 0 -->
 
-    <section>
-        <div class="chart-description">
-            <h2>Week 2: Money Supply </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                My first Vega-lite chart: M2 money supply. Source M2SL from FRED
-            </p>
-        </div>
-        <figure id="moneysupplychart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <!-- SECTION 1 -->
 
-    <section>
-        <div class="chart-description">
-            <h2>Week 3: Price-earnings ratio </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A simple altair line chart, produced with Shiller data and cleaned with python pandas.
-            </p>
-        </div>
-        <figure id="pe_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <!-- SECTION 2 -->
 
-       <section>
-        <div class="chart-description">
-            <h2>Week 4: South Africa and Lesotho Total Fertility Rate  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A chart produced using API method and data from the World Bank.
-            </p>
-        </div>
-        <figure id="TFR_chart"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <!-- SECTION 3 -->
 
-    <section>
-        <div class="chart-description">
-            <h2>Week 7: UK Airports Layered Map  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                A map produced using GeoJson. Use of Layered composition. 
-            </p>
-        </div>
-        <figure id="UK_Map"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-    <section>
-        <div class="chart-description">
-            <h2>Week 8: Milk Prices  </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Big Data seminar. Chart created using Python.  
-            </p>
-        </div>
-        <figure id="milk_prices"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-    
+    <!-- SECTION 4 -->
 
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <!-- SECTION 5 -->
+
+    <!-- SECTION 6 -->
+
+    <!-- SECTION 7: TECHNICAL NOTES / METHODOLOGY  -->
 
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
+
+    <!-- JavaScript for Progression Bar -->
     <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        //let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig3_uk-oil-prices.json" //Example of how to add a chart to the website 
-
-        let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json"; //1.Practice of adding a second chart to the second section created using its raw link 
-        
-        //let figure_3_spec = "Week 1/fig5_productivity-itl3.json"; //2.Adding a chart by downloading the file 
-        let figure_3_spec = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/fig5_productivity-itl3.json";
-
-        //let pe_chart_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/shiller_pe_ratio_chart.json"; 
-        let pe_chart_path = "Week 3/shiller_pe_ratio_chart.json"; 
-
-        let TFR_chart_path = "Week 4/TFR_live_chart.json";
-
-        //let UK_Map_path = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/DS7_6_UK_Airports_Layered.json";
-        let UK_Map_path = "Week 7/DS7_6_UK_Airports_Layered.json";
-
-        let milk_prices_path = "Week 8/wk8_milkprices_chart.json";
-        
-
-
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
-
-         vegaEmbed('#Location1', figure_1_spec); // We're using the vegaEmbed function to put a graph in the element with id figure_1
-         vegaEmbed('#Location2', figure_2_spec); //Practice of adding a chart to the second section created 
-         vegaEmbed('#Location3', figure_3_spec); //Practice of adding a chart to the second section created
-         vegaEmbed('#moneysupplychart', 'Week 2/m2_line_chart.json') //Week 2. Vega lite chart 
-         //vegaEmbed('#pe_chart','Week 3/shiller_pe_ratio_chart.json') //Week 3. Altair chart - Office hour to fix the issue
-         vegaEmbed('#pe_chart', pe_chart_path) //Week 3. Altair chart - Office hour to fix the issue  
-         vegaEmbed('#TFR_chart', 'Week 4/TFR_live_chart.json') //Week 4. API method
-         vegaEmbed ('#UK_Map', UK_Map_path) //Week 7. Maps 
-         vegaEmbed('#milk_prices', milk_prices_path) //Week 8. Milk Prices 
-
-
-         //Week 5. Practice doing a loop.
-         //Loop: help not repeating a code
-         
-            //without a loop.
-         console.log("0")
-         console.log("1")
-         console.log("2")
-         console.log("3")  
-
-            //with loop 
-        //Example 1 
-         for (let i = 0; i < 4; i++){
-            console.log("Testing")
-            console.log(i)
-         } //i: variable that will change; i<4: do it until i reach 3; i++: increase i by 1. Console ?? use to put together charts ?? 
-
-         let cities = ["London", "Paris", "Milan", "Tokyo"]
-         
-         console.log("The first city is "+cities[0])
-
-         for (let i = 0; i < 4; i++){
-            console.log(cities[i])
-         }
-
-         //Example 2 
-         let chart_specs = [
-            "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json",
-            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-06-fixing-britain-how-can-left-behind-regions-catch-up/visualisation/fig4_relative-productivity-itl3.json",
-            "Week 4/TFR_live_chart.json"
-         ]
-
-         let chart_desinations = [
-            "#Location1",
-            "#Location2",
-            "#TFR_chart"
-         ]
-
-         for (let i = 0; i < 4; i++){
-            console.log("Chart spec at: "+chart_specs[i]) //console log use to print 
-            console.log("Chart destination at: "+chart_desinations[i])
-            vegaEmbed(chart_desinations[i], chart_specs[i])
-         }
-            
-
-
-
-        
-
-
-
-
-
-
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+        function updateProgressBar() {
+            var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+            var pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPercentage = (scrollPosition / pageHeight) * 100;
+            document.getElementById("progressBar").style.width = scrollPercentage + "%";
+        }
     </script>
 
+    <!-- Javascript for Toggle Menu -->
+    <script>
+        var navMenu = document.getElementById("navMenu");
+        function openMenu() {
+            navMenu.style.right = "0";
+        }
+        function closeMenu() {
+            navMenu.style.right = "-250px";
+        }
+    </script>
+
+    <!-- Charts -->
+    <script>
+        vegaEmbed('#', '')
+        vegaEmbed('#', '')
+        vegaEmbed('#', '')
+        vegaEmbed('#', '')
+        vegaEmbed('#', '')
+        vegaEmbed('#', '')
+    </script>
+
+
+
+
+
 </body>
-    
+
 </html>
