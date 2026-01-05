@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 450,
+  "background": "#FFFBF5",
+  "width": 750,
   "height": 350,
   "params": [
     {
@@ -8,8 +9,14 @@
       "value": "Electricity Access",
       "bind": {
         "input": "select",
-        "options": ["Electricity Access", "Electric Power Consumption"],
-        "labels": ["Access Rate (%)", "Power Consumption (kWh/capita)"],
+        "options": [
+          "Electricity Access",
+          "Electric Power Consumption"
+        ],
+        "labels": [
+          "Access Rate (%)",
+          "Power Consumption (kWh/capita)"
+        ],
         "name": "Select series:"
       }
     }
@@ -18,7 +25,9 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
-        "format": {"property": "features"}
+        "format": {
+          "property": "features"
+        }
       },
       "mark": {
         "type": "geoshape",
@@ -30,19 +39,33 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_map.json",
-        "format": {"property": "features"}
+        "format": {
+          "property": "features"
+        }
       },
       "title": {
-        "text": "xx",
+        "text": "Electricity Access vs. Electricity Use in Africa",
+        "align": "left",
+        "anchor": "start",
+        "offset": 20,
         "fontSize": 14,
-        "subtitle": [],
+        "subtitle": [
+          "Comparing electricity access (% of population) and electricity consumption (kWh per capita)",
+          "Source: World Bank (2022); International Energy Agency (2022)"
+        ],
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
-        "anchor": "middle",
+        "subtitleFontWeight": "lighter",
         "color": "black"
       },
-      "projection": {"type": "mercator"},
-      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.3},
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.3
+      },
       "transform": [
         {
           "lookup": "properties.iso_a3",
@@ -58,19 +81,32 @@
             ]
           }
         },
-        {"calculate": "datum[SelectParam]", "as": "varSelected"}
+        {
+          "calculate": "datum[SelectParam]",
+          "as": "varSelected"
+        }
       ],
       "encoding": {
         "color": {
           "field": "varSelected",
-          "legend": {"title": "", "direction": "vertical"},
+          "legend": {
+            "title": "",
+            "direction": "vertical",
+            "orient": "right", 
+            "offset": -50, 
+            "padding": 10 
+          },
           "type": "quantitative",
-          "scale": {"scheme": "redpurple", "reverse": false}
+          "scale": {
+            "scheme": "redpurple",
+            "reverse": false
+          }
         },
         "tooltip": [
-          {"field": "name", 
-          "title": "Country", 
-          "type": "nominal"
+          {
+            "field": "name",
+            "title": "Country",
+            "type": "nominal"
           },
           {
             "field": "Electricity Access",

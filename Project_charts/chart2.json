@@ -1,30 +1,47 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Electric power consumption across 25 African countries",
+  "background": "#FFFBF5",
   "title": {
-    "text": "Living on 3 Lightbulbs",
+    "text": "Electric Power Consumption (kWh per capita)",
+    "align": "left",
+    "anchor": "start",
+    "offset": 20,
+    "fontSize": 14,
     "subtitle": [
-      "Electric Power Consumption (kWh per capita), 2022. 25 African countries",
-      "Source: IEA Energy Statistics Data Browser, International Energy Agency ( IEA "
+      "Electric power consumption across 25 African countries",
+      "Source: IEA Energy Statistics Data Browser, International Energy Agency (2022)"
     ],
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 11,
-    "anchor": "start",
-    "color": "black",
-    "offset": 10
+    "subtitleFontSize": 10,
+    "subtitleFontWeight": "lighter",
+    "color": "black"
   },
-  "view": {"stroke": "transparent"},
-  "width": 300,
-  "height": 300,
+  "view": {
+    "stroke": "transparent"
+  },
+  "width": 400,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Project_data/chart2.csv"
   },
   "layer": [
     {
-      "mark": {"type": "bar", "color": "#f98faf"},
+      "mark": {
+        "type": "bar",
+        "color": "#c41b8a"
+      },
       "encoding": {
-        "x": {"field": "consumption", "type": "quantitative", "title": null},
-        "scale": {"domain": [0, 4000]},
+        "x": {
+          "field": "consumption",
+          "type": "quantitative",
+          "title": null
+        },
+        "scale": {
+          "domain": [
+            0,
+            4000
+          ]
+        },
         "y": {
           "field": "country",
           "title": null,
@@ -44,12 +61,17 @@
     {
       "mark": {
         "type": "rule",
-        "strokeDash": [5, 5],
-        "color":"grey",
+        "strokeDash": [
+          5,
+          5
+        ],
+        "color": "grey",
         "strokeWidth": 1
       },
       "encoding": {
-        "x": {"datum": 1000}
+        "x": {
+          "datum": 1000
+        }
       }
     },
     {
@@ -57,13 +79,17 @@
         "type": "text",
         "align": "center",
         "baseline": "bottom",
-        "dy": -175,
+        "dy": -200,
         "fontSize": 10,
         "color": "gray"
       },
       "encoding": {
-        "x": {"datum": 1000},
-        "text": {"value": "1,000 kWh/capita"}
+        "x": {
+          "datum": 1000
+        },
+        "text": {
+          "value": "1,000 kWh/capita"
+        }
       }
     },
     {
@@ -71,14 +97,18 @@
         "type": "text",
         "align": "center",
         "baseline": "top",
-        "dy": -170,
+        "dy": -190,
         "fontSize": 9,
         "fontStyle": "italic",
         "color": "gray"
       },
       "encoding": {
-        "x": {"datum": 1000},
-        "text": {"value": "World Bank threshold for basic modern energy access"}
+        "x": {
+          "datum": 1000
+        },
+        "text": {
+          "value": "World Bank threshold for basic modern energy access"
+        }
       }
     }
   ]

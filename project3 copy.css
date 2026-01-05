@@ -42,34 +42,6 @@ body {
 }
 
 /* ============================================= */
-/* CUSTOM SCROLLBAR (Right side) */
-/* ============================================= */
-
-/* Webkit browsers (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f5f1ea;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #8b6f47;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #6b5437;
-}
-
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #8b6f47 #f5f1ea;
-}
-
-/* ============================================= */
 /* NAVIGATION BAR */
 /* ============================================= */
 
@@ -108,7 +80,7 @@ nav {
 }
 
 .nav-links ul li a {
-    color: #2d3748;
+    color: #000000;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -150,8 +122,8 @@ nav {
     width: 100%;
     background-image: linear-gradient(rgba(255, 179, 217, 0.15), rgba(232, 78, 137, 0.087)),
         url(cover5.png);
-    background-position: 0 0;
-    background-size: cover;
+    background-position: 0% 0%;
+    background-size: contain;
     background-attachment: scroll;
     position: relative;
     display: flex;
@@ -194,16 +166,6 @@ nav {
     margin-bottom: 35px;
 }
 
-/*
-.title-content p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #000000;
-    max-width: 800px;
-    margin-bottom: 25px;
-}
-*/
-
 
 /* Scroll Button (if you add it later) */
 .scroll-button {
@@ -225,6 +187,46 @@ nav {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(232, 78, 138, 0.4);
+}
+
+/* ============================================= */
+/* SECTION 0: INTRO SECTION */
+/* ============================================= */
+
+.intro-section {
+    padding: 80px 40px;
+    background-color: #FFFBF5;
+    text-align: center;
+}
+
+/* Research Question - Big Bold Text */
+.research-question {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.4;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+/* Paragraphs - Clean, No Boxes */
+.intro-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #000000;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+/* Horizontal Divider Line */
+.section-divider {
+    width: 30%;
+    height: 1px;
+    background-color: #000000;
+    border: none;
+    margin: 60px auto 40px;
 }
 
 /* ============================================= */

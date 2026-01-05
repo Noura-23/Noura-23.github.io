@@ -68,10 +68,13 @@
 
     <!-- /////// SECTION 0 - SHORT INTRO ////// -->
     <section class="intro-section">
+        <!-- Research Question (Bold) -->
         <h1 class="research-question">
             If income and electrification have increased across Africa,
             why do Africans still consume so little electricity?
         </h1>
+
+        <!-- Project Aim -->
         <p>
             <strong>Project aim:</strong> This project dismantles comforting narratives about progress.
             High access rates mask profound consumption inequality. Grid connections don't guarantee
@@ -79,10 +82,14 @@
             Each visualization answers a necessary sub-question, building from symptoms to mechanisms
             to structural explanations.
         </p>
+
+        <!-- Key Takeaway -->
         <p>
             Six visualizations reveal the truth: Africa's electricity crisis is not a lack of connections,
             income, or resources. It is a failure of systems—how electricity is priced, governed, and delivered.
         </p>
+
+        <!-- Separator Line -->
         <hr class="section-divider">
     </section>
 
@@ -90,6 +97,7 @@
     <section class="chart-section">
         <span class="chart-number">01</span>
         <h2>The Divide</h2>
+        <!-- <p class="subtitle">Where Africa's Lights Stay On</p> -->
         <p class="question">Does electricity access reflect real electricity use?</p>
         <p>
             While access rates suggest substantial progress across Africa, electricity consumption remains extremely low
@@ -97,13 +105,32 @@
             Many countries with widespread grid connections still consume too little power to support basic modern
             living standards.
         </p>
+        <!-- <p>
+            This interactive map allows you to switch between two views of the same geography:
+            electricity access (% of population connected) and electricity consumption (kWh per capita).
+            While access rates suggest widespread progress, consumption levels reveal stark inequality
+            and deprivation across the continent. Toggle between views to see the transformation.
+        </p> -->
         <div id="vis1"></div>
         <div class="transitions">
-            <p>
+            <!-- <p>
                 This gap between connection and use raises a deeper question: how much electricity do Africans actually consume?
-            </p>
+            </p> -->
         </div>
-        <!-- <hr class="section-divider"> -->
+        <hr class="section-divider">
+
+        <!-- <div class="insights"> -->
+        <!-- <h3>Key Insights</h3> -->
+        <!-- <p>
+                Being connected to the grid does not guarantee usable electricity.
+            </p> -->
+        <!-- <p>
+                Being connected to the grid does not mean having usable electricity. Nigeria shows 60% access
+                but only 156 kWh/capita consumption, while Chad shows 12% access yet 132 kWh/capita—the disconnect
+                is profound. Southern Africa clusters at 3,000-4,000 kWh/capita while West Africa remains below
+                200 kWh despite similar access rates.
+            </p> -->
+        <!-- </div> -->
 
     </section>
 
@@ -111,20 +138,37 @@
     <section class="chart-section">
         <span class="chart-number">02</span>
         <h2>Living on 3 Lightbulbs</h2>
+        <!-- <p class="subtitle">What Africa's Electricity Actually Powers</p> -->
         <p class="question">How much electricity do Africans actually use?</p>
         <p>
-            Most countries fall far below the World Bank's 1,000 kWh threshold for basic modern energy use, 
-            indicating that electricity use is largely limited to lighting and minimal household needs rather than refrigeration, 
-            heating, or productive appliances.
+            This horizontal bar chart ranks Sub-Saharan African countries by electricity consumption per capita.
+            The reference line marks the World Bank's 1,000 kWh threshold for basic modern energy use—enough to
+            power refrigeration, productive appliances, and continuous lighting. Most SSA countries fall far below
+            this threshold.
         </p>
+        <!-- <p>
+            This horizontal bar chart ranks Sub-Saharan African countries by electricity consumption per capita.
+            The reference line marks the World Bank's 1,000 kWh threshold for basic modern energy use—enough to
+            power refrigeration, productive appliances, and continuous lighting. Most SSA countries fall far below
+            this threshold.
+        </p> -->
         <div id="vis2"></div>
         <div class="transitions">
-            <p>
-                If consumption is this low even where access exists, the explanation cannot be access alone. 
-                Why, then, do people consume so little electricity?
-            </p>
+            <!-- <p>
+                This gap between connection and use raises a deeper question: how much electricity do Africans actually consume?
+            </p> -->
         </div>
-        <!-- <hr class="section-divider"> -->
+        <hr class="section-divider">
+
+        <!-- <div class="insights">
+            <h3>Key Insights</h3>
+            <p>
+                23 of 25 SSA countries consume less than 1,000 kWh/capita—below what's needed for basic modern life.
+                Chad's 132 kWh equals approximately 3 hours of lighting per day. Nigeria's 156 kWh for 220 million
+                people cannot power a refrigerator continuously. South Africa at 3,900 kWh consumes 30× more than Chad.
+                Most "connected" Africans live in pre-refrigeration conditions.
+            </p>
+        </div> -->
 
     </section>
 
@@ -132,81 +176,163 @@
     <section class="chart-section">
         <span class="chart-number">03</span>
         <h2>The Injustice</h2>
-        <p class="question">Is low electricity use simply a result of poverty?</p>
+        <p class="subtitle">Poorest Countries Pay 4× More for Electricity</p>
+
+        <p class="question"><strong>Question:</strong> Is low electricity use simply a result of poverty?</p>
+
         <p>
-            Rather than falling with income, electricity prices are often highest in the poorest countries. 
-            High tariffs make electricity unaffordable for households and firms, sharply constraining demand 
-            even when grid connections exist.
+            This scatter plot reveals the affordability paradox: GDP per capita plotted against residential
+            electricity tariffs shows that poorer populations often pay higher rates. Bubble size represents
+            population, color indicates sub-region. Use the dropdown to filter by region and explore the inverse
+            relationship creating a poverty trap.
         </p>
+
         <div id="vis3"></div>
-        <div class="transitions">
+
+        <div class="insights">
+            <h3>Key Insights</h3>
             <p>
-                But high prices are only part of the story. 
-                What happens when electricity is not only expensive—but unreliable?
+                Liberia charges $0.40/kWh for populations earning $1.70/day (24% of daily income per kWh).
+                Sierra Leone charges $0.35/kWh at $2.10/day (17%). South Africa charges $0.12/kWh at $16/day (0.75%).
+                A Liberian works 4 hours to afford what a South African buys in 5 minutes. The poverty trap:
+                low consumption → high fixed costs → unaffordable tariffs → lower consumption. Weak utilities
+                can't achieve scale economies.
             </p>
         </div>
-        <!-- <hr class="section-divider"> -->
+
+        <p class="data-source">
+            <strong>Data Source:</strong> World Bank WDI (GDP per capita PPP), Global Petrol Prices
+            (residential electricity tariffs $/kWh), IEA / National Regulators, 2023-2024
+        </p>
+
+        <hr class="section-divider">
     </section>
 
     <!-- ////// CHART 4: THE HIDDEN ECONOMY ////// -->
     <section class="chart-section">
         <span class="chart-number">04</span>
         <h2>The Hidden Economy</h2>
-        <p class="question">How do households and firms cope when the grid doesn't deliver?
+        <p class="subtitle">When the Grid Fails, Africa Generates Its Own Power</p>
+
+        <p class="question"><strong>Question:</strong> How do households and firms cope when the grid doesn't deliver?
         </p>
+
         <p>
-            In many countries, firms produce a large share of their own electricity using costly backup generators. 
-            This invisible parallel system raises production costs, increases emissions, and weakens trust in the 
-            formal grid—further suppressing demand for grid electricity.
+            This grouped bar chart compares official grid electricity generation against estimated diesel
+            self-generation by businesses. Grid unreliability forces firms to create an invisible parallel
+            energy system using expensive, polluting diesel generators. This shadow economy doesn't appear
+            in official statistics but drives up production costs and carbon emissions.
         </p>
+
         <div id="vis4"></div>
-        <div class="transitions">
+
+        <div class="insights">
+            <h3>Key Insights</h3>
             <p>
-                If people and firms are exiting the grid, the problem may not be demand at all. 
-                Does Africa simply lack the energy resources to power its economies?
+                Nigerian businesses generate approximately 43% as much electricity as the national grid via diesel
+                generators. In Liberia and Sierra Leone, 70-80% of firms own backup generators. Hidden costs:
+                diesel generation costs $0.30-0.50/kWh versus grid $0.10-0.15/kWh, raising production costs and
+                pricing African manufacturers out of global markets. Environmental impact: diesel emits 2-3× more
+                CO₂ per kWh than grid electricity, canceling renewable gains.
             </p>
         </div>
-        <!-- <hr class="section-divider"> -->
+
+        <p class="data-source">
+            <strong>Data Source:</strong> IEA Statistics / World Bank (official grid generation GWh),
+            World Bank Enterprise Surveys (% firms owning/sharing backup generators)
+        </p>
+
+        <hr class="section-divider">
     </section>
 
     <!-- ////// CHART 5: THE PARADOX ////// -->
     <section class="chart-section">
         <span class="chart-number">05</span>
         <h2>The Paradox</h2>
-        <p class="question">Does Africa lack energy resources—or the systems to use them?</p>
+        <p class="subtitle">Africa Has the Resources, Not the Infrastructure</p>
+
+        <p class="question"><strong>Question:</strong> Does Africa lack energy resources—or the systems to use them?</p>
+
         <p>
-            Despite some of the world's highest solar, hydro, and wind resources, deployed capacity remains extremely limited.
-            The disconnect between potential and deployment suggests that Africa's electricity crisis is not driven by natural 
-            scarcity, but by failures in infrastructure, investment, and systems.
+            This side-by-side visualization reveals the brutal disconnect between potential and reality.
+            On the left: what Africa has actually deployed in renewable capacity—pathetically small bubbles.
+            On the right: the abundant renewable energy potential nature provided—rich coverage across the continent.
+            The gap between reality and possibility is staggering.
         </p>
-        <div id="vis5"></div>
-        <div class="transitions">
+
+        <!-- Side-by-Side Charts -->
+        <div class="dual-charts">
+            <!-- Left Chart -->
+            <div class="chart-half">
+                <h3>Installed Renewable Capacity</h3>
+                <div id="vis5a"></div>
+                <p class="caption">Bubble size = total renewable capacity (MW). Color = dominant renewable source.</p>
+            </div>
+
+            <!-- Right Chart -->
+            <div class="chart-half">
+                <h3>Renewable Energy Potential</h3>
+                <div id="vis5b"></div>
+                <p class="caption">Combined solar, wind, and hydro potential (TWh/year). Darker colors = greater
+                    resource endowment.</p>
+            </div>
+        </div>
+
+        <div class="insights">
+            <h3>Key Insights</h3>
             <p>
-                If resources are abundant, and demand exists, 
-                why do some countries manage to escape electricity scarcity while others remain trapped?
+                Sub-Saharan Africa possesses world-class renewable resources: 5-6 kWh/m²/day solar irradiance
+                (world's highest), strong wind corridors, and 1,000+ GW untapped hydro potential. Yet total renewable
+                deployment across SSA is less than 50 GW for 1.2 billion people (40W/capita) versus Germany's 140 GW
+                for 84 million (1,670W/capita). Nigeria has solar potential matching Saudi Arabia but less than 0.2 GW
+                deployed. The crisis isn't resource scarcity—it's investment barriers, policy uncertainty, and
+                institutional failure.
             </p>
         </div>
-        <!-- <hr class="section-divider"> -->
+
+        <p class="data-source">
+            <strong>Data Source:</strong> IRENA Renewable Capacity Statistics 2024, Global Solar Atlas,
+            Global Wind Atlas, World Bank (population)
+        </p>
+
+        <hr class="section-divider">
     </section>
 
     <!-- ////// CHART 6: THE DIVERGENCE ////// -->
     <section class="chart-section">
         <span class="chart-number">06</span>
         <h2>The Divergence</h2>
-        <p class="question">Do electricity outcomes improve automatically as countries grow richer?</p>
+        <p class="subtitle">Some Escaping, Others Trapped</p>
+
+        <p class="question"><strong>Question:</strong> Do electricity outcomes improve automatically as countries grow
+            richer?</p>
+
         <p>
-            Some countries steadily expand electricity use as incomes rise, while others stagnate despite economic growth.
-            Rather than converging, electricity outcomes diverge—indicating that time and growth alone do not resolve 
-            the problem.
+            This animated scatter plot tracks countries over 13 years (2010-2023), plotting GDP per capita against
+            electricity consumption per capita. Use the year slider to watch trajectories unfold. Some countries
+            escape energy poverty while others remain trapped despite GDP growth. Economic growth does not guarantee
+            rising electricity use—outcomes diverge persistently over time.
         </p>
+
         <div id="vis6"></div>
-        <div class="transitions">
+
+        <div class="insights">
+            <h3>Key Insights</h3>
             <p>
-                Together, these trajectories show that Africa’s electricity crisis is structural, 
-                not transitional—and shaped by policy choices rather than inevitability.
+                Kenya doubled consumption 150→350 kWh through integrated grid and off-grid programs. Rwanda tripled
+                50→145 kWh despite starting from genocide. Ethiopia grew through massive hydro investment. Meanwhile,
+                Nigeria stagnated 145→160 kWh despite 4× Kenya's GDP per capita and oil revenues. Angola and DRC show
+                similar patterns: GDP growth without electricity investment equals hollow development. The gap between
+                Escapers and Trapped widened 2010-2023, not closed. Policy determines trajectories.
             </p>
         </div>
-        <!-- <hr class="section-divider"> -->
+
+        <p class="data-source">
+            <strong>Data Source:</strong> World Bank World Development Indicators - GDP per capita PPP,
+            Electric power consumption per capita, Population, Annual data 2010-2023
+        </p>
+
+        <hr class="section-divider">
     </section>
 
     <!-- ////// CONCLUSIONS SECTION ////// -->
@@ -379,7 +505,7 @@
     <script>
         vegaEmbed('#vis1', 'Project_charts/chart1.json')
         vegaEmbed('#vis2', 'Project_charts/chart2.json')
-        vegaEmbed('#vis3', 'Project_charts/chart3.json')
+        vegaEmbed('#vis3', '')
         vegaEmbed('#vis4', '')
         vegaEmbed('#vis5', '')
         vegaEmbed('#vis6', '')
