@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 350,
+  "width": 450,
+  "background": "#FFFBF5",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Project_data/chart6_data.csv",
+    "format": {"type": "csv"}
+  },
+  "title": {
+    "text": "Electric Power Consumption vs. GDP per capita",
+    "anchor": "start",
+    "align": "left",
+    "fontSize": 14,
+    "offset": 20,
+    "subtitle": ["Sources: World Bank, IEA Energy Statistics", ""],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleFontWeight": "lighter",
+    "color": "black"
+  },
+  "mark": {"type": "circle", "color": "#dd3497"},
+  "params": [
+    {"name": "hover", "select": {"type": "point", "on": "pointerover"}},
+    {
+      "name": "yearSelector",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2022,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "gdp_per_capita_ppp",
+      "type": "quantitative",
+      "title": "GDP per capita, PPP (constant 2017 international $)",
+      "axis": {
+        "titleAlign": "right",
+        "titleAnchor": "end",
+        "titleFontSize": 12,
+        "titleFontStyle": "italic",
+        "titleFontWeight": "normal",
+        "format": "$,.0f",
+        "tickCount": 5,
+        "gridDash": [2, 4],
+        "gridColor": "#cccccc"
+      }
+    },
+    "y": {
+      "field": "electric_power_kwh_per_capita",
+      "type": "quantitative",
+      "title": ["Electric power consumption", "(kWh per capita)"],
+      "axis": {
+        "titleAngle": 0,
+        "titleAlign": "left",
+        "titleX": 5,
+        "titleY": 15,
+        "titleFontSize": 12,
+        "titleFontStyle": "italic",
+        "titleFontWeight": "normal",
+        "format": ",.0f",
+        "tickCount": 8,
+        "gridDash": [2, 4],
+        "gridColor": "#cccccc"
+      }
+    },
+    "size": {
+      "condition": {"param": "hover", "value": 350, "empty": false},
+      "value": 150
+    },
+    "opacity": {
+      "condition": {"param": "hover", "value": 1, "empty": false},
+      "value": 0.5
+    },
+    "order": {
+      "condition": {"param": "hover", "value": 1, "empty": false},
+      "value": 0
+    },
+    "tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "year", "title": "Year"},
+      {
+        "field": "gdp_per_capita_ppp",
+        "title": "GDP per capita, PPP ($)",
+        "format": "$,.0f"
+      },
+      {
+        "field": "electric_power_kwh_per_capita",
+        "title": "Electric power consumption (kWh per capita)",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "transform": [
+    {"filter": "datum.year == yearSelector"}
+  ],
+  "view": {"stroke": "transparent"}
+}
