@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>African GDP Dashboard</title>
+  
+  <!-- Vega Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFBF5;
+      padding: 40px 20px;
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .chart {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .source {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    
+    .colab-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    
+    .colab-link a {
+      color: #dd3497;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .colab-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>African GDP Per Capita Dashboard</h1>
+    <div class="subtitle">Economic Development Trends (2000-2023)</div>
+    
+    <div class="dashboard">
+      <div class="chart" id="chart1"></div>
+      <div class="chart" id="chart2"></div>
+      <div class="chart" id="chart3"></div>
+      <div class="chart" id="chart4"></div>
+      <div class="chart" id="chart5"></div>
+      <div class="chart" id="chart6"></div>
+    </div>
+    
+    <div class="source">Source: World Bank Open Data API</div>
+    <div class="colab-link">
+      <a href="Yhttps://colab.research.google.com/drive/1lTyypmsi3m-02b19ZMRRtigbX1Z5x7pv?usp=sharing" target="_blank">📊 View Python Code (Google Colab)</a>
+    </div>
+  </div>
+  
+  <script>
+    // Base URL for your charts
+    const baseURL = "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/";
+    
+    // Embed all charts from JSON files
+    vegaEmbed('#chart1', baseURL + 'chart_nigeria.json', {actions: false});
+    vegaEmbed('#chart2', baseURL + 'chart_south_africa.json', {actions: false});
+    vegaEmbed('#chart3', baseURL + 'chart_egypt.json', {actions: false});
+    vegaEmbed('#chart4', baseURL + 'chart_kenya.json', {actions: false});
+    vegaEmbed('#chart5', baseURL + 'chart_morocco.json', {actions: false});
+    vegaEmbed('#chart6', baseURL + 'chart_ethiopia.json', {actions: false});
+  </script>
+</body>
+</html>

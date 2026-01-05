@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 200,
+  "width": 280,
+  "background": "#FFFBF5",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/data_kenya_gdp.json"
+  },
+  "title": {
+    "text": "Kenya",
+    "anchor": "middle",
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "color": "black"
+  },
+  "mark": {
+    "type": "line",
+    "color": "#dd3497",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "gridDash": [2, 4],
+        "gridColor": "lightgray",
+        "labelFontSize": 10,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "gdp_per_capita",
+      "type": "quantitative",
+      "title": "GDP per capita (US$)",
+      "axis": {
+        "gridDash": [2, 4],
+        "gridColor": "lightgray",
+        "titleFontSize": 10,
+        "titleFontStyle": "italic",
+        "format": "$,.0f",
+        "labelFontSize": 9
+      }
+    },
+    "tooltip": [
+      {"field": "year", "title": "Year"},
+      {"field": "gdp_per_capita", "title": "GDP per capita", "format": "$,.0f"}
+    ]
+  },
+  "view": {"stroke": "transparent"}
+}
