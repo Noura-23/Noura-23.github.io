@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "height": 350,
+  "width": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/tallest_buildings.csv"  
+  },
+    "title": {
+    "text": "World's Tallest Buildings",
+    "anchor": "start",
+    "align": "left",
+    "fontSize": 14,
+    "offset": 20,
+    "subtitle": ["Source: Skyscraper Center Database, 2026", ""],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleFontWeight": "lighter",
+    "color": "black"
+  },
+  "mark": {
+    "type": "bar",
+    "color": "#dd3497",
+    "opacity": 0.8
+  },
+  "encoding": {
+    "x": {
+      "field": "building_name",
+      "type": "nominal",
+      "sort": "y",
+      "title": "Building Name",
+      "axis": {
+        "labelAngle": -45,
+        "labelAlign": "right",
+        "titleFontSize": 12,
+        "titleFontStyle": "italic",
+        "titleFontWeight": "normal"
+      }
+    },
+    "y": {
+      "field": "height_m",
+      "type": "quantitative",
+      "title": ["Height", "(meters)"],
+      "axis": {
+        "titleAngle": 0,
+        "titleAlign": "left",
+        "titleX": 5,
+        "titleY": -10,
+        "titleFontSize": 12,
+        "titleFontStyle": "italic",
+        "titleFontWeight": "normal",
+        "gridDash": [2, 4],
+        "gridColor": "lightgrey"
+      }
+    },
+    "tooltip": [
+      {"field": "building_name", "title": "Building"},
+      {"field": "city", "title": "City"},
+      {"field": "height_m", "title": "Height (m)", "format": ",.0f"}
+    ]
+  },
+  "view": {"stroke": "transparent"}
+}

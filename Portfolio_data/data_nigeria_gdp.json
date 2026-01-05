@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2023",
+    "gdp_per_capita": 2138.76383719983,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2022",
+    "gdp_per_capita": 2899.16047470324,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2021",
+    "gdp_per_capita": 2787.48779224428,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2020",
+    "gdp_per_capita": 2797.18458068686,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2019",
+    "gdp_per_capita": 3189.81286498516,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2018",
+    "gdp_per_capita": 2057.87944554011,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2017",
+    "gdp_per_capita": 1876.34027111773,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2016",
+    "gdp_per_capita": 2070.4127339595,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2015",
+    "gdp_per_capita": 2585.73360671797,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2014",
+    "gdp_per_capita": 3088.72131316169,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2013",
+    "gdp_per_capita": 2872.79083379398,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2012",
+    "gdp_per_capita": 2633.19734671361,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2011",
+    "gdp_per_capita": 2418.41316975875,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2010",
+    "gdp_per_capita": 2202.25672957344,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2009",
+    "gdp_per_capita": 1820.48633854782,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2008",
+    "gdp_per_capita": 2154.10543545364,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2007",
+    "gdp_per_capita": 1815.52697545827,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2006",
+    "gdp_per_capita": 1599.53891556365,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2005",
+    "gdp_per_capita": 1211.37703504386,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2004",
+    "gdp_per_capita": 962.48104194733,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2003",
+    "gdp_per_capita": 763.388745367223,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2002",
+    "gdp_per_capita": 712.164852077686,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2001",
+    "gdp_per_capita": 566.428231812933,
+    "country": "Nigeria"
+  },
+  {
+    "year": "2000",
+    "gdp_per_capita": 547.318298903379,
+    "country": "Nigeria"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2023",
+    "gdp_per_capita": 3813.72607421875,
+    "country": "Morocco"
+  },
+  {
+    "year": "2022",
+    "gdp_per_capita": 3463.1376953125,
+    "country": "Morocco"
+  },
+  {
+    "year": "2021",
+    "gdp_per_capita": 3785.93627929688,
+    "country": "Morocco"
+  },
+  {
+    "year": "2020",
+    "gdp_per_capita": 3268.0302734375,
+    "country": "Morocco"
+  },
+  {
+    "year": "2019",
+    "gdp_per_capita": 3508.09765625,
+    "country": "Morocco"
+  },
+  {
+    "year": "2018",
+    "gdp_per_capita": 3501.69799804688,
+    "country": "Morocco"
+  },
+  {
+    "year": "2017",
+    "gdp_per_capita": 3296.52661132813,
+    "country": "Morocco"
+  },
+  {
+    "year": "2016",
+    "gdp_per_capita": 3140.85546875,
+    "country": "Morocco"
+  },
+  {
+    "year": "2015",
+    "gdp_per_capita": 3146.24780273438,
+    "country": "Morocco"
+  },
+  {
+    "year": "2014",
+    "gdp_per_capita": 3435.40698242188,
+    "country": "Morocco"
+  },
+  {
+    "year": "2013",
+    "gdp_per_capita": 3379.7431640625,
+    "country": "Morocco"
+  },
+  {
+    "year": "2012",
+    "gdp_per_capita": 3164.17724609375,
+    "country": "Morocco"
+  },
+  {
+    "year": "2011",
+    "gdp_per_capita": 3301.98876953125,
+    "country": "Morocco"
+  },
+  {
+    "year": "2010",
+    "gdp_per_capita": 3067.9853515625,
+    "country": "Morocco"
+  },
+  {
+    "year": "2009",
+    "gdp_per_capita": 3119.58862304688,
+    "country": "Morocco"
+  },
+  {
+    "year": "2008",
+    "gdp_per_capita": 3183.20043945313,
+    "country": "Morocco"
+  },
+  {
+    "year": "2007",
+    "gdp_per_capita": 2755.5859375,
+    "country": "Morocco"
+  },
+  {
+    "year": "2006",
+    "gdp_per_capita": 2438.12646484375,
+    "country": "Morocco"
+  },
+  {
+    "year": "2005",
+    "gdp_per_capita": 2242.98828125,
+    "country": "Morocco"
+  },
+  {
+    "year": "2004",
+    "gdp_per_capita": 2183.55541992188,
+    "country": "Morocco"
+  },
+  {
+    "year": "2003",
+    "gdp_per_capita": 1941.87255859375,
+    "country": "Morocco"
+  },
+  {
+    "year": "2002",
+    "gdp_per_capita": 1596.02062988281,
+    "country": "Morocco"
+  },
+  {
+    "year": "2001",
+    "gdp_per_capita": 1506.24523925781,
+    "country": "Morocco"
+  },
+  {
+    "year": "2000",
+    "gdp_per_capita": 1499.107421875,
+    "country": "Morocco"
+  }
+]

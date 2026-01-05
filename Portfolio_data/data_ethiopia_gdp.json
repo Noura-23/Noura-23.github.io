@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2023",
+    "gdp_per_capita": 1055.81091592527,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2022",
+    "gdp_per_capita": 982.103161506992,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2021",
+    "gdp_per_capita": 893.00983544905,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2020",
+    "gdp_per_capita": 829.790982547947,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2019",
+    "gdp_per_capita": 793.473247210264,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2018",
+    "gdp_per_capita": 739.702022272086,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2017",
+    "gdp_per_capita": 696.348429076216,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2016",
+    "gdp_per_capita": 641.651523286233,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2015",
+    "gdp_per_capita": 597.912113218663,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2014",
+    "gdp_per_capita": 549.986577082588,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2013",
+    "gdp_per_capita": 484.039833104062,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2012",
+    "gdp_per_capita": 452.101031885754,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2011",
+    "gdp_per_capita": 343.024942351887,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2010",
+    "gdp_per_capita": 330.619412798644,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2009",
+    "gdp_per_capita": 368.574712267445,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2008",
+    "gdp_per_capita": 316.410475118075,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2007",
+    "gdp_per_capita": 237.146255996319,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2006",
+    "gdp_per_capita": 189.345737521418,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2005",
+    "gdp_per_capita": 158.243458082465,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2004",
+    "gdp_per_capita": 133.169812538096,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2003",
+    "gdp_per_capita": 116.800491132777,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2002",
+    "gdp_per_capita": 109.593813612988,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2001",
+    "gdp_per_capita": 118.457204255261,
+    "country": "Ethiopia"
+  },
+  {
+    "year": "2000",
+    "gdp_per_capita": 122.269202606069,
+    "country": "Ethiopia"
+  }
+]

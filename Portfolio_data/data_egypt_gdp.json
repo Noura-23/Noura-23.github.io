@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2023",
+    "gdp_per_capita": 3456.78968456253,
+    "country": "Egypt"
+  },
+  {
+    "year": "2022",
+    "gdp_per_capita": 4233.30783744856,
+    "country": "Egypt"
+  },
+  {
+    "year": "2021",
+    "gdp_per_capita": 3827.35415374308,
+    "country": "Egypt"
+  },
+  {
+    "year": "2020",
+    "gdp_per_capita": 3511.11381026379,
+    "country": "Egypt"
+  },
+  {
+    "year": "2019",
+    "gdp_per_capita": 2962.98892023003,
+    "country": "Egypt"
+  },
+  {
+    "year": "2018",
+    "gdp_per_capita": 2484.70315630508,
+    "country": "Egypt"
+  },
+  {
+    "year": "2017",
+    "gdp_per_capita": 2395.10333299491,
+    "country": "Egypt"
+  },
+  {
+    "year": "2016",
+    "gdp_per_capita": 3270.6287768197,
+    "country": "Egypt"
+  },
+  {
+    "year": "2015",
+    "gdp_per_capita": 3306.98159414141,
+    "country": "Egypt"
+  },
+  {
+    "year": "2014",
+    "gdp_per_capita": 3133.39102265541,
+    "country": "Egypt"
+  },
+  {
+    "year": "2013",
+    "gdp_per_capita": 3025.52563552448,
+    "country": "Egypt"
+  },
+  {
+    "year": "2012",
+    "gdp_per_capita": 2996.0677072015,
+    "country": "Egypt"
+  },
+  {
+    "year": "2011",
+    "gdp_per_capita": 2590.64384891965,
+    "country": "Egypt"
+  },
+  {
+    "year": "2010",
+    "gdp_per_capita": 2455.08194645282,
+    "country": "Egypt"
+  },
+  {
+    "year": "2009",
+    "gdp_per_capita": 2161.63964573927,
+    "country": "Egypt"
+  },
+  {
+    "year": "2008",
+    "gdp_per_capita": 1896.21594269779,
+    "country": "Egypt"
+  },
+  {
+    "year": "2007",
+    "gdp_per_capita": 1547.74170735909,
+    "country": "Egypt"
+  },
+  {
+    "year": "2006",
+    "gdp_per_capita": 1298.97900203124,
+    "country": "Egypt"
+  },
+  {
+    "year": "2005",
+    "gdp_per_capita": 1105.53920713903,
+    "country": "Egypt"
+  },
+  {
+    "year": "2004",
+    "gdp_per_capita": 991.255689145253,
+    "country": "Egypt"
+  },
+  {
+    "year": "2003",
+    "gdp_per_capita": 1031.27556291284,
+    "country": "Egypt"
+  },
+  {
+    "year": "2002",
+    "gdp_per_capita": 1116.82884626213,
+    "country": "Egypt"
+  },
+  {
+    "year": "2001",
+    "gdp_per_capita": 1295.1374184163,
+    "country": "Egypt"
+  },
+  {
+    "year": "2000",
+    "gdp_per_capita": 1366.09274372613,
+    "country": "Egypt"
+  }
+]

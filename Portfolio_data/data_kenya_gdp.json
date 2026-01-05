@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2023",
+    "gdp_per_capita": 1942.58802756191,
+    "country": "Kenya"
+  },
+  {
+    "year": "2022",
+    "gdp_per_capita": 2109.56288513137,
+    "country": "Kenya"
+  },
+  {
+    "year": "2021",
+    "gdp_per_capita": 2061.35622089594,
+    "country": "Kenya"
+  },
+  {
+    "year": "2020",
+    "gdp_per_capita": 1927.66459027849,
+    "country": "Kenya"
+  },
+  {
+    "year": "2019",
+    "gdp_per_capita": 1960.40808854893,
+    "country": "Kenya"
+  },
+  {
+    "year": "2018",
+    "gdp_per_capita": 1836.45275528993,
+    "country": "Kenya"
+  },
+  {
+    "year": "2017",
+    "gdp_per_capita": 1667.48447230835,
+    "country": "Kenya"
+  },
+  {
+    "year": "2016",
+    "gdp_per_capita": 1554.12610314423,
+    "country": "Kenya"
+  },
+  {
+    "year": "2015",
+    "gdp_per_capita": 1489.11959777284,
+    "country": "Kenya"
+  },
+  {
+    "year": "2014",
+    "gdp_per_capita": 1482.81566253497,
+    "country": "Kenya"
+  },
+  {
+    "year": "2013",
+    "gdp_per_capita": 1370.87885214659,
+    "country": "Kenya"
+  },
+  {
+    "year": "2012",
+    "gdp_per_capita": 1285.00536171512,
+    "country": "Kenya"
+  },
+  {
+    "year": "2011",
+    "gdp_per_capita": 1096.14499807675,
+    "country": "Kenya"
+  },
+  {
+    "year": "2010",
+    "gdp_per_capita": 1091.51873101194,
+    "country": "Kenya"
+  },
+  {
+    "year": "2009",
+    "gdp_per_capita": 1047.9678324485,
+    "country": "Kenya"
+  },
+  {
+    "year": "2008",
+    "gdp_per_capita": 915.54435473604,
+    "country": "Kenya"
+  },
+  {
+    "year": "2007",
+    "gdp_per_capita": 840.201439476765,
+    "country": "Kenya"
+  },
+  {
+    "year": "2006",
+    "gdp_per_capita": 699.80237063381,
+    "country": "Kenya"
+  },
+  {
+    "year": "2005",
+    "gdp_per_capita": 523.456312433863,
+    "country": "Kenya"
+  },
+  {
+    "year": "2004",
+    "gdp_per_capita": 463.662781300121,
+    "country": "Kenya"
+  },
+  {
+    "year": "2003",
+    "gdp_per_capita": 442.898457253405,
+    "country": "Kenya"
+  },
+  {
+    "year": "2002",
+    "gdp_per_capita": 402.936385605382,
+    "country": "Kenya"
+  },
+  {
+    "year": "2001",
+    "gdp_per_capita": 410.700452474814,
+    "country": "Kenya"
+  },
+  {
+    "year": "2000",
+    "gdp_per_capita": 414.626365130846,
+    "country": "Kenya"
+  }
+]
