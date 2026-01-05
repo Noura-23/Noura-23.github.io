@@ -137,7 +137,7 @@ nav {
 /* HEADER TITLE CONTENT */
 /* ============================================= */
 
-.title-content {
+/* .title-content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -169,6 +169,44 @@ nav {
 
 nav .fa {
   display: none;
+} */
+
+.title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Changed from center */
+  align-items: center;
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px;  /* Adjust this value to control exact spacing */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-content h1 {
+  font-family: 'Open Sans', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.title-content h2 {
+  font-family: 'Open Sans', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.title-content p {
+  font-size: 1rem;
+  color: #000000;
+  max-width: 700px;
+  line-height: 1.7;
 }
 
 /* ============================================= */
@@ -181,10 +219,30 @@ nav .fa {
   text-align: center;
 }
 
+.intro-title {
+  margin-bottom: 50px;
+}
+
+.intro-title h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.intro-title h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333333;
+}
+
 /* Research Question - Big Bold Text */
 .research-question {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.09rem;
   font-weight: 700;
   color: #000000;
   line-height: 1.4;

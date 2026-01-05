@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Noura Coulibaly</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Vega, Vega-Lite, and Vega-Embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="portfolio copy.css">
+</head>
+
+<body>
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <section class="main-header">
+        <!-- Navigation Bar -->
+        <nav>
+            <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
+            <div class="nav-links" id="navMenu">
+                <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="project.html">PROJECT</a></li>
+                    <li><a href="https://github.com/Noura-23/Noura-23.github.io" target="_blank">GITHUB</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Title Content -->
+        <div class="title-content">
+            <h1>Portfolio</h1>
+            <p>PP434 - Automated Visualisation for Policymaking</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- CC1. Hosting -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC1</span>
+            <h2>Hosting</h2>
+            <p class="task-description"><strong>Task:</strong> Set up Github account and live page using GitHub pages. Add two charts using vegaEmbed function.</p>
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Chart 1</h3>
+                    <figure id="cc1_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Chart 2</h3>
+                    <figure id="cc1_2"></figure>
+                </div>
+            </div>
+            
+            <p class="source"><strong>Source:</strong> <a href="https://rdeconomist.github.io/library" target="_blank">Professor Richard Davies's Chart Library</a></p>
+        </section>
+        <script>
+            vegaEmbed('#cc1_1', 'Portfolio_charts/four countries_gdp.json');
+            vegaEmbed('#cc1_2', 'Portfolio_charts/gun deaths and income.json');
+        </script>
+
+        <!-- CC2. Building -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC2</span>
+            <h2>Building</h2>
+            <p class="task-description"><strong>Task:</strong> Set up an account on the Economics Observatory Data Hub & Build two separate charts using the "create" tool.</p>
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Chart 1</h3>
+                    <figure id="cc2_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Chart 2</h3>
+                    <figure id="cc2_2"></figure>
+                </div>
+            </div>
+            
+            <p class="insight">Internal displacement in Ethiopia and DR Congo has surged to record levels due to ongoing armed conflicts, affecting nearly 10 million people combined.</p>
+            
+            <p class="source"><strong>Source:</strong> <a href="https://www.economicsobservatory.com/create" target="_blank">Economics Observatory Create Your Own Chart</a></p>
+        </section>
+        <script>
+            vegaEmbed('#cc2_1', 'Portfolio_charts/displacement_ethiopia.json');
+            vegaEmbed('#cc2_2', 'Portfolio_charts/displacement_drcongo.json');
+        </script>
+
+        <!-- CC3. Debate -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC3</span>
+            <h2>Debate</h2>
+            <p class="task-description"><strong>Task:</strong> Produce two charts that support or refute a topic of policy debate.</p>
+            
+            <div class="requirements">
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>Set out a topic that was discussed</li>
+                    <li>Make two charts that support or refute it or relate to an argument on this topic</li>
+                    <li>Comment on what you find</li>
+                </ul>
+            </div>
+            
+            <figure id="cc3_1"></figure>
+            <figure id="cc3_2"></figure>
+        </section>
+        <script>
+            vegaEmbed('#cc3_1', 'Portfolio_charts/cc3_chart1.json');
+            vegaEmbed('#cc3_2', '');
+        </script>
+
+        <!-- CC4. Replication -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC4</span>
+            <h2>Replication</h2>
+            <p class="task-description"><strong>Task:</strong> Find a chart that a policy organisation, journalist, think tank, television channel or company has used. Replicate it and then improve on it.</p>
+            
+            <p>Original chart appeared in:</p>
+            <!-- Add image of original chart here -->
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>My Replication</h3>
+                    <figure id="cc4_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Improved Version</h3>
+                    <figure id="cc4_2"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- CC5. Accessing Data -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC5</span>
+            <h2>Accessing Data: Scraper and API</h2>
+            
+            <div class="sub-task">
+                <p class="task-description"><strong>API Task:</strong> Add a chart to your site that uses a live link to an API. Below your chart, add a functional description of the API.</p>
+                <figure id="cc5_1"></figure>
+            </div>
+            
+            <div class="sub-task">
+                <p class="task-description"><strong>Scraper Task:</strong> Using a Google Colab python notebook, scrape a website.</p>
+                <figure id="cc5_2"></figure>
+            </div>
+        </section>
+        <script>
+            vegaEmbed('#cc5_1', 'Portfolio_charts/TFR_live_chart.json');
+            vegaEmbed('#cc5_2', '');
+        </script>
+
+        <!-- CC6. Loops -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC6</span>
+            <h2>Loops: Build a Dashboard</h2>
+            <p class="task-description"><strong>Task:</strong> Use a loop to batch download six different series as JSON files. Save these to your GitHub account and use these (as "raw" files) to supply the data to six (or more) charts on a theme of your choice.</p>
+            
+            <figure id="cc6"></figure>
+        </section>
+        <script>
+            vegaEmbed('#cc6', '');
+        </script>
+
+        <!-- CC7. Maps -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC7</span>
+            <h2>Maps: Base Maps and Choropleths</h2>
+            <p class="task-description"><strong>Task:</strong> Produce two maps and embed them in your portfolio page. Both should be of the same country, region, area, or city.</p>
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Map 1</h3>
+                    <figure id="cc7_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Map 2</h3>
+                    <figure id="cc7_2"></figure>
+                </div>
+            </div>
+        </section>
+        <script>
+            vegaEmbed('#cc7_1', '');
+            vegaEmbed('#cc7_2', 'Portfolio_charts/scotland_crimes.json');
+        </script>
+
+        <!-- CC8. Big Data -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC8</span>
+            <h2>Big Data: Extracting a Story from Millions of Prices</h2>
+            <p class="task-description"><strong>Task:</strong> Produce two charts using either of the two UK prices datasets provided in class. Both charts can be from the same database, or you can produce one from each.</p>
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Chart 1</h3>
+                    <figure id="cc8_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Chart 2</h3>
+                    <figure id="cc8_2"></figure>
+                </div>
+            </div>
+        </section>
+        <script>
+            vegaEmbed('#cc8_1', '');
+            vegaEmbed('#cc8_2', '');
+        </script>
+
+        <!-- CC9. Interactive Charts -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC9</span>
+            <h2>Interactive Charts: Analytics Charts</h2>
+            <p class="task-description"><strong>Task:</strong> Produce two charts that include interactivity.</p>
+            
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Chart 1</h3>
+                    <figure id="cc9_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Chart 2</h3>
+                    <figure id="cc9_2"></figure>
+                </div>
+            </div>
+        </section>
+        <script>
+            vegaEmbed('#cc9_1', 'Portfolio_charts/African_map.json');
+            vegaEmbed('#cc9_2', '');
+        </script>
+
+        <!-- CC10. Advanced Analysis -->
+        <section class="challenge-section">
+            <span class="challenge-number">CC10</span>
+            <h2>Advanced Analysis and Machine Learning</h2>
+            
+            <div class="sub-task">
+                <p class="task-description"><strong>Task 1: Advanced Analytics Chart</strong> - Produce a chart that uses more advanced analytics than standard line, bar or scatter charts.</p>
+                <h3>Chart 1</h3>
+                <figure id="cc10_1"></figure>
+            </div>
+            
+            <div class="sub-task">
+                <p class="task-description"><strong>Task 2: Machine Learning</strong> - Conduct an applied data analysis using any of the machine learning techniques taught in the Week 10 lecture and seminar.</p>
+                <h3>Chart 2</h3>
+                <figure id="cc10_2"></figure>
+            </div>
+        </section>
+        <script>
+            vegaEmbed('#cc10_1', '');
+            vegaEmbed('#cc10_2', '');
+        </script>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>PP434 - Automated Visualisation for Policymaking</p>
+        <p class="footer-links">
+            <a href="project.html">Project</a> |
+            <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/" target="_blank">LinkedIn</a>
+        </p>
+        <p class="footer-credit">Noura Coulibaly | London School of Economics and Political Science</p>
+    </footer>
+
+    <!-- JavaScript for Progress Bar -->
+    <script>
+        window.onscroll = function() {
+            updateProgressBar();
+        };
+        function updateProgressBar() {
+            var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+            var pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPercentage = (scrollPosition / pageHeight) * 100;
+            document.getElementById("progressBar").style.width = scrollPercentage + "%";
+        }
+    </script>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navMenu = document.getElementById("navMenu");
+        function openMenu() {
+            navMenu.style.right = "0";
+        }
+        function closeMenu() {
+            navMenu.style.right = "-250px";
+        }
+    </script>
+
+</body>
+
+</html>
