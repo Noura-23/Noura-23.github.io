@@ -1,22 +1,22 @@
-building_name,city,height,floors
-Burj Khalifa,Dubai,"828 m /  2,717 ft",163
-Merdeka 118,Kuala Lumpur,"679 m /  2,227 ft",118
-Shanghai Tower,Shanghai,"632 m /  2,073 ft",128
-Makkah Royal Clock Tower,Mecca,"601 m /  1,972 ft",120
-Ping An Finance Center,Shenzhen,"599 m /  1,965 ft",115
-Lotte World Tower,Seoul,"555 m /  1,819 ft",123
-One World Trade Center,New York City,"541 m /  1,776 ft",94
-Guangzhou CTF Finance Centre,Guangzhou,"530 m /  1,739 ft",111
-Tianjin CTF Finance Centre,Tianjin,"530 m /  1,739 ft",97
-CITIC Tower,Beijing,"528 m /  1,731 ft",109
-TAIPEI 101,Taipei,"508 m /  1,667 ft",101
-Shanghai World Financial Center,Shanghai,"492 m /  1,614 ft",101
-International Commerce Centre,Hong Kong,"484 m /  1,588 ft",108
-Wuhan Greenland Center,Wuhan,"476 m /  1,560 ft",101
-Central Park Tower,New York City,"472 m /  1,550 ft",98
-Lakhta Center,St. Petersburg,"462 m /  1,516 ft",87
-Vincom Landmark 81,Ho Chi Minh City,"461 m /  1,513 ft",81
-The Exchange 106,Kuala Lumpur,"454 m /  1,488 ft",95
-Changsha IFS Tower T1,Changsha,"452 m /  1,483 ft",94
-Petronas Twin Tower 1,Kuala Lumpur,"452 m /  1,483 ft",88
-Petronas Twin Tower 2,Kuala Lumpur,"452 m /  1,483 ft",88
+building_name,city,height_m
+Burj Khalifa,Dubai,828
+Merdeka 118,Kuala Lumpur,679
+Shanghai Tower,Shanghai,632
+Makkah Royal Clock Tower,Mecca,601
+Ping An Finance Center,Shenzhen,599
+Lotte World Tower,Seoul,555
+One World Trade Center,New York City,541
+Guangzhou CTF Finance Centre,Guangzhou,530
+Tianjin CTF Finance Centre,Tianjin,530
+CITIC Tower,Beijing,528
+TAIPEI 101,Taipei,508
+Shanghai World Financial Center,Shanghai,492
+International Commerce Centre,Hong Kong,484
+Wuhan Greenland Center,Wuhan,476
+Central Park Tower,New York City,472
+Lakhta Center,St. Petersburg,462
+Vincom Landmark 81,Ho Chi Minh City,461
+The Exchange 106,Kuala Lumpur,454
+Changsha IFS Tower T1,Changsha,452
+Petronas Twin Tower 1,Kuala Lumpur,452
+Petronas Twin Tower 2,Kuala Lumpur,452
