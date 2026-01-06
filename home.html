@@ -1,32 +1,120 @@
-<li><a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/" target="_blank">LINKEDIN</a>
-</li>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Noura Coulibaly</title>
 
-    <!-- SECTION 1 -->
-    <section class="">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <!-- Navigation Bar -->
+        <nav>
+            <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
+            <div class="nav-links" id="navMenu">
+                <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="project.html">PROJECT</a></li>
+                    <li><a href="https://github.com/Noura-23/Noura-23.github.io" target="_blank">GITHUB</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Noura Coulibaly</h1>
+            <div class="links-row">
+                <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/" target="_blank" class="hero-link">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <span class="separator">|</span>
+                <a href="https://github.com/Noura-23/Noura-23.github.io" target="_blank" class="hero-link">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+            <p class="program-info">Master of Public Administration - LSE</p>
+            <p class="course-info">PP434 - Automated Visualisation for Policymaking, 2025</p>
+            <p class="course-info">Candidate Number: 68363</p>
+            <a href="#content" class="discover-btn">Discover more</a>
+        </div>
     </section>
-    <!-- SECTION 2 -->
-    <section class="">
 
-    </section>
-    <!-- SECTION 3 -->
-    <section class="">
+    <!-- CONTENT SECTION -->
+    <section class="content-section" id="content">
+        <h2>Content</h2>
+        
+        <div class="content-cards">
+            <!-- Portfolio Card -->
+            <div class="content-card">
+                <h3>Portfolio</h3>
+                <p>10 coding challenges (CC) showcasing different technical skills learned throughout the year.</p>
+                <a href="portfolio.html" class="explore-btn">Explore</a>
+            </div>
 
+            <!-- Project Card -->
+            <div class="content-card">
+                <h3>Project</h3>
+                <p>"Africa's Electricity Crisis: Six Uncomfortable Truths"</p>
+                <a href="project.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
     </section>
-    <!-- SECTION 4 -->
-    <section class="">
 
-    </section>
-    <!-- SECTION 5 -->
-    <section class="">
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>PP434 - Automated Visualisation for Policymaking</p>
+        <p class="footer-links">
+            <a href="portfolio.html">Portfolio</a> |
+            <a href="project.html">Project</a> |
+            <a href="https://www.linkedin.com/in/noura-coulibaly-a5a898224/" target="_blank">LinkedIn</a>
+        </p>
+        <p class="footer-credit">Noura Coulibaly | London School of Economics and Political Science</p>
+    </footer>
 
-    </section>
-    <!-- SECTION 6 -->
-    <section class="">
+    <!-- JavaScript for Progress Bar -->
+    <script>
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+        function updateProgressBar() {
+            var scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+            var pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPercentage = (scrollPosition / pageHeight) * 100;
+            document.getElementById("progressBar").style.width = scrollPercentage + "%";
+        }
+    </script>
 
-    </section>
-    <!-- SECTION 7: TECHNICAL NOTES / METHODOLOGY  -->
-    <section class="">
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navMenu = document.getElementById("navMenu");
+        function openMenu() {
+            navMenu.style.right = "0";
+        }
+        function closeMenu() {
+            navMenu.style.right = "-250px";
+        }
+    </script>
+</body>
 
-    </section>
+</html>

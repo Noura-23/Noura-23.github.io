@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#e7e7eb",
+  "description": "Cumulative investment in renewable energy by region (donut chart)",
+  "width": 300,
+  "height": 375,
+  "title": {
+    "text": "Cumulative investment in renewable energy by region",
+    "subtitle": "USD billion (current 2020)",
+    "fontSize": 14,
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": "lighter",
+    "align": "left",
+    "anchor": "start",
+    "offset": 20
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/fig5_cumulative.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Investment_Million_USD / 1000",
+      "as": "Investment_Billion"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 80,
+        "outerRadius": 140
+      },
+      "encoding": {
+        "theta": {
+          "field": "Investment_Billion",
+          "type": "quantitative",
+          "stack": true
+        },
+        "color": {
+          "field": "Region",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Southern Africa", "East Africa", "West Africa", "Central Africa"],
+            "range": ["#26A69A", "#FDD835", "#FF9800", "#BDBDBD"]
+          },
+          "legend": {
+            "orient": "right",
+            "title": null,
+            "labelFontSize": 10,
+            "symbolSize": 90,
+            "symbolType": "square"
+          }
+        },
+        "tooltip": [
+          {"field": "Region", "type": "nominal", "title": "Region"},
+          {"field": "Investment_Billion", "type": "quantitative", "title": "USD Billion", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 0,
+        "outerRadius": 80,
+        "color": "white"
+      },
+      "encoding": {
+        "theta": {"value": 6.283185}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 48,
+        "fontWeight": "bold",
+        "dy": -10
+      },
+      "encoding": {
+        "text": {
+          "aggregate": "sum",
+          "field": "Investment_Billion",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "dy": 20
+      },
+      "encoding": {
+        "text": {"value": "USD billion"}
+      }
+    }
+  ]
+}

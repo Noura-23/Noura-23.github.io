@@ -28,7 +28,7 @@
       "field": "building_name",
       "type": "nominal",
       "sort": "y",
-      "title": "Building Name",
+      "title": null,
       "axis": {
         "labelAngle": -45,
         "labelAlign": "right",
