@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fcf8f2",
+  "title": {
+    "text": "Primary Schools in Wales by Language of Instruction (2022)"
+  },
+  "width": 350,
+  "height": 400,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
+        "format": {"type": "topojson", "feature": "object_name"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgrey",
+        "opacity": 0.7,
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "properties.LAD25NM",
+          "type": "nominal",
+          "title": "Local Authority"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/welsh_primary_schools_clean.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.6,
+        "size": 15
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longY",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latX",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Language",
+          "type": "nominal",
+          "title": "Language of Instruction",
+          "scale": {
+            "domain": ["Welsh medium", "English medium", "Bilingual", "Dual stream"],
+            "range": ["#C72C6C", "#E8A735", "#4A90E2", "#2ECC71"]
+          },
+          "legend": {
+            "direction": "vertical",
+            "titleFontSize": 11,
+            "labelFontSize": 10
+          }
+        },
+        "tooltip": [
+          {
+            "field": "School_Name",
+            "type": "nominal",
+            "title": "School"
+          },
+          {
+            "field": "Language",
+            "type": "nominal",
+            "title": "Language"
+          },
+          {
+            "field": "Town",
+            "type": "nominal",
+            "title": "Town"
+          }
+        ]
+      }
+    }
+  ]
+}

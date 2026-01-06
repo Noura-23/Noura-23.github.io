@@ -38,7 +38,9 @@
       "axis": {
         "title": "",
         "titleColor": "#122B39",
-        "grid": false
+        "grid": false, 
+        "labelOverlap": true, 
+        "labelFlush": false
       }
     },
     "y": {

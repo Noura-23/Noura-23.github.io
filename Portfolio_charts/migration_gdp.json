@@ -1,12 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fcf8f2",
   "title": {
     "text": "UK Net Migration and GDP Growth (2012-2024)",
     "subtitle": ["Comparing migration levels and economic growth"],
     "subtitleFontStyle": "italic",
-    "offset": 15
+    "subtitleFontWeight": "lighter",
+    "offset": 15,
+    "align": "left",
+    "anchor": "start"
   },
-  "width": 500,
+  "width": 425,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/UK_data.csv"
@@ -24,21 +28,30 @@
     {
       "mark": {
         "type": "line",
-        "color": "#ec539d",
         "strokeWidth": 1.5
       },
       "encoding": {
         "y": {
           "field": "Net migration Total",
           "type": "quantitative",
-          "title": "Net Migration (# of people)",
+          "title": "Net Migration (# of people)"
+        },
+        "color": {
+          "datum": "Net Migration",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Net Migration", "GDP Growth"],
+            "range": ["#ec539d", "#faa9b8"]
+          },
+          "legend": {
+            "orient": "top"
+          }
         }
       }
     },
     {
       "mark": {
         "type": "line",
-        "color": "#faa9b8",
         "strokeWidth": 1.5
       },
       "encoding": {
@@ -46,6 +59,15 @@
           "field": "GDP growth (%)",
           "type": "quantitative",
           "title": "GDP Growth (%)"
+        },
+        "color": {
+          "datum": "GDP Growth",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Net Migration", "GDP Growth"],
+            "range": ["#ec539d", "#faa9b8"]
+          },
+          "legend": null
         }
       }
     },
@@ -64,14 +86,14 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 185,
-        "dy": -15,
+        "dx": 75,
+        "dy": -9,
         "fontSize": 9,
         "fontStyle": "italic",
         "color": "darkred"
       },
       "encoding": {
-        "x": {"datum": 2016},
+        "x": {"datum": "2016"},
         "y": {"datum": 850000},
         "text": {"value": "Brexit referendum"}
       }
@@ -91,14 +113,14 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 330,
-        "dy": -15,
+        "dx": -130,
+        "dy": -9,
         "fontSize": 9,
         "fontStyle": "italic",
         "color": "darkred"
       },
       "encoding": {
-        "x": {"datum": 2020},
+        "x": {"datum": "2020"},
         "y": {"datum": 850000},
         "text": {"value": "UK left EU"}
       }

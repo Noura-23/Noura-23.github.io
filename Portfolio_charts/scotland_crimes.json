@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fcf8f2",
   "title": "Scotland Number of Crimes by Local Authority (2024)",
   "width": 350,
   "height": 400,

@@ -60,9 +60,10 @@
         <section class="challenge-section">
             <span class="challenge-number">CC1</span>
             <h2>Hosting</h2>
-            <p class="task-description"><strong>Task:</strong> Set up Github account and live page using GitHub pages.
-                Add two charts using vegaEmbed function.</p>
-
+            <p class="task-description">
+                <strong>Task:</strong> Set up Github account and live page using GitHub pages.
+                Add two charts using vegaEmbed function.
+            </p>
             <div class="charts-container">
                 <div class="chart-wrapper">
                     <figure id="cc1_1"></figure>
@@ -97,7 +98,7 @@
             <p class="insight">Internal displacement in Ethiopia and DR Congo has surged to record levels due to ongoing
                 armed conflicts, affecting nearly 10 million people combined.</p>
             <p class="source"><strong>Source:</strong> <a href="https://www.economicsobservatory.com/create"
-                    target="_blank">Economics Observatory Create Your Own Chart</a></p>
+                    target="_blank">Economics Observatory</a></p>
         </section>
         <script>
             vegaEmbed('#cc2_1', 'Portfolio_charts/displacement_ethiopia.json');
@@ -108,25 +109,34 @@
         <section class="challenge-section">
             <span class="challenge-number">CC3</span>
             <h2>Debate</h2>
-            <p class="task-description"><strong>Task:</strong> Produce two charts that support or refute a topic of
-                policy debate.</p>
-
-            <div class="requirements">
-                <p><strong>Requirements:</strong></p>
-                <ul>
-                    <li>Set out a topic that was discussed</li>
-                    <li>Make two charts that support or refute it or relate to an argument on this topic</li>
-                    <li>Comment on what you find</li>
-                </ul>
+            <p class="task-description"><strong>Task:</strong>
+                Produce two charts that support or refute a topic of policy debate.
+            </p>
+            <p><strong>Policy context:</strong>
+                A central argument for the Brexit was that immigration negatively impacted economic growth and employment in the UK.<br> 
+                Policymakers claimed that restricting immigration, particularly from the EU, would protect British jobs and strengthen the economy.<br>
+                I found it interesting to examine whether post-Brexit migration policies achieved their stated goals of reducing net migration while 
+                maintaining economic stability.
+            </p>
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <figure id="cc3_1"></figure>
+                </div>
+                <div class="chart-wrapper">
+                    <figure id="cc3_2"></figure>
+                </div>
             </div>
             <p class="insight">xx.</p>
-            <p class="source"><strong>Source:</strong> <a href="xx" target="_blank">xx</a></p>
+            <p class="source"><strong>Source:</strong> <a
+                    href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/longterminternationalmigrationprovisional/yearendingjune2025"
+                    target="_blank">UK Office for National Statistics</a>
+            </p>
             <figure id="cc3_1"></figure>
             <figure id="cc3_2"></figure>
         </section>
         <script>
-            vegaEmbed('#cc3_1', 'Portfolio_charts/cc3_chart1.json');
-            vegaEmbed('#cc3_2', '');
+            vegaEmbed('#cc3_1', 'Portfolio_charts/migration_gdp.json');
+            vegaEmbed('#cc3_2', 'Portfolio_charts/migration_unemployment.json');
         </script>
 
         <!-- CC4. Replication -->
@@ -164,12 +174,14 @@
 
             <div class="charts-container">
                 <div class="chart-wrapper">
-                    <p class="task-description"><strong>API Task:</strong> Add a chart to your site that uses a live link to
+                    <p class="task-description"><strong>API Task:</strong> Add a chart to your site that uses a live
+                        link to
                         an API. Below your chart, add a functional description of the API.</p>
                     <figure id="cc5_1"></figure>
                 </div>
                 <div class="chart-wrapper">
-                    <p class="task-description"><strong>Scraper Task:</strong> Using a Google Colab python notebook, scrape
+                    <p class="task-description"><strong>Scraper Task:</strong> Using a Google Colab python notebook,
+                        scrape
                         a website.</p>
                     <figure id="cc5_2"></figure>
                 </div>
@@ -217,7 +229,7 @@
             <p class="source"><strong>Source:</strong> <a href="xx" target="_blank">xx</a></p>
         </section>
         <script>
-            vegaEmbed('#cc7_1', '');
+            vegaEmbed('#cc7_1', 'Portfolio_charts/wales_primary_schools.json');
             vegaEmbed('#cc7_2', 'Portfolio_charts/scotland_crimes.json');
         </script>
 
@@ -260,7 +272,8 @@
                 </div>
             </div>
             <p class="insight">xx.</p>
-            <p class="source"><strong>Source:</strong> <a href="xx" target="_blank">xx</a></p>
+            <p class="source"><strong>Source:</strong> <a href="https://datamap.gov.wales/layergroups/geonode:all_schools_wales" target="_blank">DataMap Wales</a></p>
+            <p class="source"><strong>Source:</strong> <a href="https://datamap.gov.wales/layergroups/geonode:all_schools_wales" target="_blank">DataMap Wales</a></p>
         </section>
         <script>
             vegaEmbed('#cc9_1', 'Project_charts/chart1.json');
@@ -279,7 +292,8 @@
                     <figure id="cc10_1"></figure>
                 </div>
                 <div class="chart-wrapper">
-                    <p class="task-description"><strong>Task 2: Machine Learning</strong> - Conduct an applied data analysis
+                    <p class="task-description"><strong>Task 2: Machine Learning</strong> - Conduct an applied data
+                        analysis
                         using any of the machine learning techniques taught in the Week 10 lecture and seminar.</p>
                     <figure id="cc10_2"></figure>
                 </div>

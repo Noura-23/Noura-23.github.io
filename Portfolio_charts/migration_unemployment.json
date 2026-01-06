@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fcf8f2",
+  "title": {
+    "text": "UK Net Migration and Unemployment rate (2012-2024)",
+    "subtitle": ["Comparing migration levels and economic growth"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontWeight": "lighter",
+    "offset": 15,
+    "align": "left",
+    "anchor": "start"
+  },
+  "width": 425,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/UK_data.csv"
+  },
+  "transform": [{"filter": "datum.Year > 0"}],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": 0}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "Net migration Total",
+          "type": "quantitative",
+          "title": "Net Migration (# of people)"
+        },
+        "color": {
+          "datum": "Net Migration",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Net Migration", "Unemployment Rate"],
+            "range": ["#ec539d", "#faa9b8"]
+          },
+          "legend": {
+            "orient":"top"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "Unemployment rate (%)",
+          "type": "quantitative",
+          "title": "Unemployment rate (%)"
+        },
+        "color": {
+          "datum": "Unemployment Rate",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Net Migration", "Unemployment Rate"],
+            "range": ["#ec539d", "#faa9b8"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "darkred",
+        "strokeDash": [5, 5],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"datum": "2016"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 75,
+        "dy": -9,
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "color": "darkred"
+      },
+      "encoding": {
+        "x": {"datum": "2016"},
+        "y": {"datum": 850000},
+        "text": {"value": "Brexit referendum"}
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "darkred",
+        "strokeDash": [5, 5],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"datum": "2020"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -130,
+        "dy": -9,
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "color": "darkred"
+      },
+      "encoding": {
+        "x": {"datum": "2020"},
+        "y": {"datum": 850000},
+        "text": {"value": "UK left EU"}
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  }
+}
