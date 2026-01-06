@@ -1,431 +1,850 @@
-/* ===========================
-   COLOR PALETTE
-   =========================== */
-:root {
-    /* Background colors */
-    --bg-primary: #F5F3EF;
-    --bg-secondary: #FEFDFB;
-    --bg-section: #FFFFFF;
-    
-    /* Accent colors - soft, professional, welcoming */
-    --accent-pink: #E8C4D8;
-    --accent-purple: #D4C5E8;
-    --accent-green: #C8E6D5;
-    --accent-sage: #D5E0D5;
-    --accent-peach: #F5D5C8;
-    
-    /* Text colors */
-    --text-primary: #2D2D2D;
-    --text-secondary: #5A5A5A;
-    --text-light: #8A8A8A;
-    
-    /* Border and accent */
-    --border-color: #E8E5E0;
-    --shadow-light: rgba(0, 0, 0, 0.05);
+/* ============================================= */
+/* GLOBAL STYLES & RESET */
+/* ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===========================
-   GLOBAL STYLES
-   =========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  font-family: 'Open Sans', 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fcf8f2;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+/* ============================================= */
+/* PROGRESS BAR (Top of page) */
+/* ============================================= */
+
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e8dcc8;
+  z-index: 10000;
 }
 
-::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
+.progress-bar {
+  height: 5px;
+  background-color: #b6996f;
+  width: 0%;
+  transition: width 0.15s ease;
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--accent-sage);
-    border-radius: 5px;
+/* ============================================= */
+/* MAIN HEADER SECTION */
+/* ============================================= */
+
+.main-header {
+  min-height: 70vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 179, 217, 0.15), rgba(232, 78, 137, 0.087)),
+    url(/cover.png);
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-green);
-}
+/* ============================================= */
+/* NAVIGATION BAR */
+/* ============================================= */
 
-/* ===========================
-   HEADER STYLES
-   =========================== */
-header {
-    background-color: var(--bg-secondary);
-    padding: 1.5rem 0;
-    border-bottom: 2px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px var(--shadow-light);
-}
-
-header > p:first-of-type {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--text-primary);
-}
-
-header h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--text-primary);
-    margin: 1rem 0 0.5rem 0;
-    font-weight: 600;
-}
-
-header h2 {
-    text-align: center;
-    font-size: 1.3rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-header > p:nth-of-type(2) {
-    text-align: center;
-    font-size: 0.95rem;
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
-
-/* Navigation */
 nav {
-    text-align: center;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: var(--bg-primary);
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 1rem auto 0 auto;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: center;
+  /* Center the links */
+  align-items: center;
+  position: relative;
 }
 
-nav a {
-    margin: 0 1.5rem;
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
+/* Hamburger Icon - HIDDEN on desktop */
+.menu-icon {
+  display: none;
+  /* Start hidden */
 }
 
-nav a:hover {
-    color: var(--accent-purple);
+/* Close Icon - HIDDEN on desktop */
+.close-icon {
+  display: none;
+  /* Start hidden */
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--accent-purple);
-    transition: width 0.3s ease;
+/* Menu Container - VISIBLE on desktop */
+.nav-links {
+  text-align: center;
 }
 
-nav a:hover::after {
-    width: 100%;
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===========================
-   MAIN CONTENT CONTAINER
-   =========================== */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
+.nav-links ul li {
+  display: inline-block;
+  padding: 12px 20px;
+  position: relative;
 }
 
-/* ===========================
-   SECTION STYLES
-   =========================== */
-section {
-    background-color: var(--bg-section);
-    margin: 3rem 0;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px var(--shadow-light);
-    border-left: 4px solid var(--accent-sage);
+.nav-links ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
+
+/* Hover underline animation */
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #b6996f;
+  display: block;
+  margin: auto;
+  transition: width 0.4s ease;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.nav-links ul li a:hover {
+  transform: translateY(-4px);   
+  transition: transform 0.3s ease;     
+}
+
+/* ============================================= */
+/* HEADER TITLE CONTENT */
+/* ============================================= */
+
+/* .title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: top center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title-content h1 {
+  font-family: 'Open Sans', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.title-content h2 {
+  font-family: 'Open Sans', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000000;
+  font-style: italic;
+  margin-bottom: 35px;
+}
+
+nav .fa {
+  display: none;
+} */
+
+.title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Changed from center */
+  align-items: center;
+  text-align: center;
+  padding: 20px 15px;
+  margin-top: 40px;  /* Adjust this value to control exact spacing */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-content h1 {
+  font-family: 'Open Sans', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.title-content h2 {
+  font-family: 'Open Sans', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.title-content p {
+  font-size: 1rem;
+  color: #000000;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ============================================= */
+/* SECTION 0: INTRO / RESEARCH QUESTION */
+/* ============================================= */
 
 .intro-section {
-    border-left-color: var(--accent-pink);
-    text-align: center;
+  padding: 60px 30px;
+  background-color: #FFFBF5;
+  text-align: center;
 }
 
-.intro-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+.intro-title {
+  margin-bottom: 50px;
 }
 
+.intro-title h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.intro-title h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Research Question - Big Bold Text */
+.research-question {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.09rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+/* Paragraphs - Clean, No Boxes */
 .intro-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+  max-width: 1100px;
+  margin: 0 auto 30px;
 }
 
-/* Chart sections - alternate border colors */
-.chart-section:nth-child(odd) {
-    border-left-color: var(--accent-purple);
+/* Horizontal Divider Line */
+.section-divider {
+  width: 30%;
+  height: 1px;
+  background-color: #000000;
+  border: none;
+  margin: 30px auto 20px;
 }
 
-.chart-section:nth-child(even) {
-    border-left-color: var(--accent-green);
+/* ============================================= */
+/* CHART SECTIONS */
+/* ============================================= */
+
+.chart-section {
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #FFFBF5;
 }
 
+/* Chart Number Badge */
+.chart-number {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #DAA06D);
+  padding: 6px 18px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Chart Title - Direct h2 selector */
 .chart-section h2 {
-    font-size: 1.8rem;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
-.chart-section h3 {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 2rem;
-    text-align: center;
+
+/* Question Text*/
+.question {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 30px auto;
+  max-width: 900px;
 }
 
-/* Chart container */
-figure {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: var(--bg-secondary);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px var(--shadow-light);
+/* Regular Paragraphs - NO BORDERS, NO BOXES */
+.chart-section p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
-/* Chart description box */
-.chart-description {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: var(--bg-primary);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+/* Transition sections */
+.transitions {
+  text-align: center;
+  padding: 30px 20px;
+  margin: 50px auto 0;
+  max-width: 700px;
 }
 
-.chart-description h4 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin-bottom: 0.8rem;
-    margin-top: 1.5rem;
+.transitions p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.07rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #9b550a; 
+  margin: 0;
+  line-height: 1.7;
 }
 
-.chart-description h4:first-child {
-    margin-top: 0;
+/* Optional: Add arrow after transition
+.transitions p::after {
+  content: ' ↓';
+  font-size: 1.3rem;
+  font-style: normal;
+  display: block;
+  margin-top: 15px;
+  color: #9b550a;
+} */
+
+/* Chart Visualization Containers */
+#vis1,
+#vis2,
+#vis3,
+#vis4,
+#vis5a,
+#vis5b,
+#vis6 {
+  margin: 40px auto;
+  max-width: 1000px;
 }
 
-.chart-description p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
+/* ============================================= */
+/* CHART 5: DUAL SIDE-BY-SIDE LAYOUT */
+/* ============================================= */
+
+.dual-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
-.chart-description ul {
-    list-style-position: inside;
-    margin-left: 1rem;
+.chart-half {
+  text-align: center;
 }
 
-.chart-description li {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+.chart-half h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
 }
+
+.caption {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* ============================================= */
+/* INSIGHTS BOX - Pink Gradient, NO BORDER */
+/* ============================================= */
+
+/* .insights {
+  background: #f6d7b798; 
+  padding: 30px 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.insights h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.insights p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+  text-align: left;
+} */
+
+/* ============================================= */
+/* DATA SOURCE - Small Text, NO BOX */
+/* ============================================= */
 
 .data-source {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-style: italic;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-top: 30px;
 }
 
-/* ===========================
-   CONCLUSION & METHODOLOGY
-   =========================== */
+.data-source a {
+  color: #C72C6C;
+  text-decoration: none;
+}
+
+.data-source a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================= */
+/* DATA & TOOLS SECTION */
+/* ============================================= */
+
+.data-section {
+  padding: 80px 40px;
+  background-color: #FFFBF5;
+  text-align: center;
+}
+
+.data-section h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.data-content {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.data-content h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E84E8A;
+}
+
+.data-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+.data-content a {
+  color: #C72C6C;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.data-content a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================= */
+/* CONCLUSIONS SECTION */
+/* ============================================= */
+
 .conclusion-section {
-    border-left-color: var(--accent-peach);
+  padding: 80px 40px;
+  background-color: #FFFBF5;
+  text-align: center;
 }
 
-.methodology-section {
-    border-left-color: var(--accent-sage);
+.conclusion-section h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
 }
 
-.conclusion-section h2,
-.methodology-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+.conclusion-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #C72C6C;
+  margin-bottom: 40px;
 }
 
-.conclusion-section p,
-.methodology-section p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
+.conclusion-section>p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+  max-width: 1000px;
+  margin: 0 auto 40px;
 }
 
-.methodology-section h3 {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+/* Diagnostic Journey List */
+.journey-list {
+  background: linear-gradient(135deg, #FFE5F1, #FFD4E8);
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 10px;
 }
 
-.methodology-section ul {
-    list-style-position: inside;
-    margin-left: 1rem;
+.journey-list ol {
+  list-style-position: inside;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.methodology-section li {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+.journey-list li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 15px;
+  padding-left: 10px;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
-footer {
-    background-color: var(--bg-secondary);
-    padding: 2rem;
-    text-align: center;
-    border-top: 2px solid var(--border-color);
-    margin-top: 4rem;
+/* Key Findings */
+.key-findings {
+  margin: 50px auto;
+  max-width: 1000px;
 }
 
-footer p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin: 0.3rem 0;
+.key-findings h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 40px;
 }
 
-/* ===========================
-   SCROLL TO TOP BUTTON
-   =========================== */
-#scrollToTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--accent-purple);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+.finding {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+  padding: 30px;
+  background: linear-gradient(135deg, #FFE5F1, #FFD4E8);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.finding-num {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #E84E8A, #C72C6C);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.finding h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.finding p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+/* Final Statement */
+.final-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 35px;
+  background: linear-gradient(135deg, #E84E8A, #C72C6C);
+  border-radius: 10px;
+}
+
+/* ============================================= */
+/* FOOTER */
+/* ============================================= */
+
+.site-footer {
+  background: linear-gradient(135deg, #8B1B58, #5A0E3A);
+  color: #FFFFFF;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.site-footer p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+.footer-links {
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #FFB3D9;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #FFE5F1;
+  text-decoration: underline;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: #FFD4E8;
+  margin-top: 10px;
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN - MOBILE */
+/* ============================================= */
+
+@media (max-width: 700px) {
+
+  /* SHOW hamburger icon - TOP LEFT */
+  .menu-icon {
+    display: block;
+    /* Make visible */
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 20px;
+    color: #000000;
     cursor: pointer;
-    box-shadow: 0 4px 10px var(--shadow-light);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 101;
+  }
+
+  /* HIDE desktop links, prepare slide-in menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fcf8f2; /*linear-gradient(135deg, #FFE5F1, #FFD4E8)*/
+    z-index: 100;
+    transition: right 0.3s ease;
+    padding-top: 60px;
+    text-align: left;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* SHOW close icon - TOP RIGHT of menu panel */
+  .close-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  /* Stack links vertically on mobile */
+  .nav-links ul {
+    display: block;
+  }
+
+  .nav-links ul li {
+    display: block;
+    padding: 15px 25px;
+  }
+
+  /* Remove hover underline on mobile */
+  .nav-links ul li::after {
+    display: none;
+  }
+
+  /* Adjust link color for readability */
+  .nav-links ul li a {
+    color: #000000;
+    font-size: 14px;
+  }
+
+  /* Header adjustments */
+  .main-header {
+    min-height: 85vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title-content {
+    padding: 60px 20px 40px;
+    margin-top: auto;
+  }
+
+  .title-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .title-content h2 {
+    font-size: 1.3rem;
+  }
+
+  /*Intro section */
+  .intro-section {
+    padding: 60px 20px;
+  }
+
+  .research-question {
+    font-size: 1.6rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  /* Chart sections */
+  .chart-section {
+    padding: 60px 20px;
+  }
+
+  .chart-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  /* Dual charts - stack on mobile */
+  .dual-charts {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Findings */
+  .finding {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .finding-num {
+    align-self: center;
+  }
+
+  /* Data & Conclusions */
+  .data-section,
+  .conclusion-section {
+    padding: 60px 20px;
+  }
 }
 
-#scrollToTop.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollToTop:hover {
-    background-color: var(--accent-pink);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px var(--shadow-light);
-}
-
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    header h2 {
-        font-size: 1.1rem;
-    }
-    
-    header > p:first-of-type {
-        flex-direction: column;
-        gap: 0.5rem;
-        font-size: 1rem;
-    }
-    
-    nav {
-        margin: 1rem 1rem 0 1rem;
-    }
-    
-    nav a {
-        display: inline-block;
-        margin: 0.5rem 0.8rem;
-    }
-    
-    main {
-        padding: 1rem;
-    }
-    
-    section {
-        padding: 1.5rem;
-        margin: 2rem 0;
-    }
-    
-    .chart-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .chart-section h3 {
-        font-size: 1rem;
-    }
-    
-    #scrollToTop {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-    }
-}
-
+/* Small Mobile */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
-    
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-    
-    section {
-        padding: 1rem;
-    }
+  .title-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .title-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .research-question {
+    font-size: 1.4rem;
+  }
+
+  .chart-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    width: 200px;
+    right: -200px;
+  }
+}
+
+/* ============================================= */
+/* UTILITY CLASSES */
+/* ============================================= */
+
+/* Links */
+a {
+  color: #C72C6C;
+}
+
+a:hover {
+  color: #8B1B58;
+}
+
+/* Strong/Bold text */
+strong {
+  font-weight: 700;
+  color: #000000;
 }
