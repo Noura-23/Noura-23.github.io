@@ -1,5 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "#fcf8f2",
+  "height": 350,
+  "width": 400,
   "title": {
     "text": "South Africa and Lesotho's Total fertility rates",
     "subtitle": "Source: UN Population Division via World Bank"

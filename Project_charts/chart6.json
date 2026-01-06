@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 350,
-  "width": 450,
+  "width": 400,
   "background": "#FFFBF5",
   "data": {
     "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Project_data/chart6_data.csv",

@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#fcf8f2",
   "title": {
     "text": "Displacement",
     "anchor": "start",
@@ -15,7 +16,6 @@
     "type": "fit",
     "contains": "padding"
   },
-  "background": "#ffffff",
   "view": {
     "fill": "#ffffff",
     "strokeOpacity": 0
