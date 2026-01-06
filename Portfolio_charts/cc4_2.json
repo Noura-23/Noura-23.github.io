@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/fig5_cumulative.csv"
+  },
+  "title": {
+    "text": "Cumulative investment in renewable energy by region",
+    "align": "left",
+    "anchor": "start",
+    "offset": 15,
+    "subtitle": "USD billion (current 2020)",
+    "fontSize": 14,
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": "lighter"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Investment_Million_USD / 1000",
+      "as": "Investment_Billion"
+    },
+    {
+      "window": [{"op": "sum", "field": "Investment_Billion", "as": "TotalSum"}],
+      "frame": [null, null]
+    },
+    {
+      "calculate": "(datum.Investment_Billion / datum.TotalSum) * 100",
+      "as": "Percentage"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Region",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "Investment_Billion",
+        "op": "sum",
+        "order": "descending"
+      },
+      "axis": {
+        "labelFontSize": 12,
+        "labelPadding": 10
+      }
+    },
+    "x": {
+      "field": "Investment_Billion",
+      "type": "quantitative",
+      "title": "USD billion",
+      "scale": {
+        "domain": [0, 25]
+      },
+      "axis": {
+        "titleFontSize": 12,
+        "labelFontSize": 11
+      }
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Central Africa", "Southern Africa", "East Africa", "West Africa"],
+        "range": ["#9E9E9E", "#26A69A", "#FFCA28", "#FF7043"]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "Investment_Billion", "type": "quantitative", "title": "USD Billion", "format": "$.1f"},
+      {"field": "Percentage", "type": "quantitative", "title": "Percentage", "format": ".1f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
