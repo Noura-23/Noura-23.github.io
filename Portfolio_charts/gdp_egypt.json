@@ -2,12 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 200,
   "width": 280,
-  "background": "#FFFBF5",
+  "background": "#fcf8f2",
   "data": {
-    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/data_nigeria_gdp.json"
+    "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/data_egypt_gdp.json"
   },
   "title": {
-    "text": "Nigeria",
+    "text": "Egypt",
     "anchor": "middle",
     "fontSize": 14,
     "fontWeight": "bold",
@@ -24,7 +24,6 @@
       "type": "ordinal",
       "title": null,
       "axis": {
-        "labels": false,
         "gridDash": [2, 4],
         "gridColor": "lightgray"
       }
@@ -34,12 +33,8 @@
       "type": "quantitative",
       "title": "GDP per capita (US$)",
       "axis": {
-        "gridDash": [2, 4],
-        "gridColor": "lightgray",
-        "titleFontSize": 10,
-        "titleFontStyle": "italic",
-        "format": "$,.0f",
-        "labelFontSize": 9
+        "gridDash": [2,4],
+        "gridColor": "lightgrey"
       }
     },
     "tooltip": [

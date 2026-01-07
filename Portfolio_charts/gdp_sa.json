@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height": 200,
   "width": 280,
-  "background": "#FFFBF5",
+  "background": "#fcf8f2",
   "data": {
     "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Portfolio_data/data_south_africa_gdp.json"
   },
@@ -24,7 +24,6 @@
       "type": "ordinal",
       "title": null,
       "axis": {
-        "labels": false,
         "gridDash": [
           2,
           4
@@ -35,9 +34,8 @@
     "y": {
       "field": "gdp_per_capita",
       "type": "quantitative",
-      "title": null,
+      "title": "GDP per capita (US$)",
       "axis": {
-        "labels": false,
         "gridDash": [2,4],
         "gridColor": "lightgrey"
       }

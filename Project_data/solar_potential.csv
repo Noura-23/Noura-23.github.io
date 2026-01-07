@@ -1,0 +1,28 @@
+country,pvout_kwh_kwp,ghi_kwh_m2,population_2018,global_rank,seasonality_index,category
+Algeria,4.917,5.923,42228429,22,1.35,Transition
+Angola,4.659,5.747,30809762,57,1.32,Transition
+Botswana,5.107,6.067,2254126,10,1.21,Transition
+Burkina Faso,4.570,5.807,19751535,65,1.26,Transition
+Burundi,4.172,5.190,11175378,120,1.32,Lagging
+Cabo Verde,4.682,5.636,543767,53,1.34,Transition
+Cameroon,4.277,5.296,25216237,105,1.44,Transition
+Chad,4.837,6.262,15477751,31,1.38,Lagging
+Congo,3.767,4.860,5244363,161,1.28,Lagging
+Congo DR,4.256,5.188,84068091,111,1.30,Lagging
+Côte d'Ivoire,4.000,5.055,25069229,138,1.41,Transition
+Egypt,5.247,6.259,98423595,4,1.31,High Performer
+Ethiopia,4.695,5.850,109224559,52,1.58,Transition
+Ghana,4.020,5.096,29767108,135,1.39,Transition
+Kenya,4.504,5.780,51393010,74,1.38,Transition
+Mali,4.676,6.018,19077690,56,1.24,Lagging
+Morocco,5.007,5.563,36029138,13,1.31,High Performer
+Namibia,5.379,6.405,2448255,1,1.17,Transition
+Niger,4.837,6.265,22442948,32,1.24,Lagging
+Nigeria,4.298,5.436,195874740,102,1.40,Lagging
+Senegal,4.584,5.798,15854360,64,1.28,Transition
+South Africa,5.004,5.629,57779622,15,1.23,High Performer
+Sudan,4.943,6.323,41801533,17,1.42,Transition
+Tanzania,4.507,5.657,56318348,73,1.31,Lagging
+Tunisia,4.745,5.301,11565204,46,1.48,High Performer
+Zambia,4.828,5.883,17351822,35,1.39,Transition
+Zimbabwe,4.861,5.781,14439018,28,1.27,Transition

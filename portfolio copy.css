@@ -328,7 +328,47 @@ figure {
   max-width: 100%;
 }
 
+/* ============================================= */
+/* DASHBOARD GRID FOR CC6 */
+/* ============================================= */
 
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.chart-card {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 16px rgba(232, 78, 138, 0.15);
+  transform: translateY(-3px);
+}
+
+.chart-card figure {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 700px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .chart-card {
+    padding: 15px;
+  }
+}
 
 /* ============================================= */
 /* FOOTER */

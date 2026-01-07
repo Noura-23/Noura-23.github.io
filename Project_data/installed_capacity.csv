@@ -1,0 +1,55 @@
+country,hydro_mw,wind_mw,solar_mw,total_renewable_mw,total_renewable_gw,category
+Algeria,129,10,462,601,0.601,Transition
+Angola,3729,0,362,4091,4.091,Transition
+Benin,1,0,35,36,0.036,Lagging
+Botswana,0,0,10,10,0.010,Lagging
+Burkina Faso,34,0,206,240,0.240,Transition
+Burundi,63,0,10,73,0.073,Lagging
+Cabo Verde,0,27,11,38,0.038,Transition
+Cameroon,814,0,33,847,0.847,Transition
+Central African Republic,19,0,40,59,0.059,Lagging
+Chad,0,1,2,3,0.003,Lagging
+Comoros,1,0,3,4,0.004,Lagging
+Congo,214,0,1,215,0.215,Lagging
+Congo DR,3188,0,25,3213,3.213,Lagging
+Côte d'Ivoire,879,0,40,919,0.919,Transition
+Djibouti,0,80,61,141,0.141,Transition
+Egypt,2832,2199,2590,7621,7.621,High Performer
+Equatorial Guinea,127,0,0,127,0.127,Lagging
+Eritrea,1,1,25,27,0.027,Lagging
+Eswatini,62,0,0,62,0.062,Transition
+Ethiopia,5683,324,22,6029,6.029,Transition
+Gabon,331,0,0,331,0.331,Transition
+Gambia,0,1,25,26,0.026,Lagging
+Ghana,1584,0,188,1772,1.772,Transition
+Guinea,814,0,17,831,0.831,Transition
+Guinea Bissau,0,0,2,2,0.002,Lagging
+Kenya,859,436,369,1664,1.664,Transition
+Lesotho,75,0,29,104,0.104,Transition
+Liberia,93,0,8,101,0.101,Lagging
+Madagascar,193,0,8,201,0.201,Transition
+Malawi,393,0,109,502,0.502,Transition
+Mali,455,0,137,592,0.592,Lagging
+Mauritania,137,137,157,431,0.431,Transition
+Mauritius,62,11,139,212,0.212,Transition
+Morocco,2120,2128,934,5182,5.182,High Performer
+Mozambique,2194,0,107,2301,2.301,Transition
+Namibia,351,5,163,519,0.519,Transition
+Niger,0,0,163,163,0.163,Lagging
+Nigeria,2861,0,144,3005,3.005,Lagging
+Reunion,134,15,239,388,0.388,Transition
+Rwanda,153,0,28,181,0.181,Transition
+Sao Tome and Principe,2,0,1,3,0.003,Lagging
+Senegal,0,159,273,432,0.432,Transition
+Seychelles,0,6,18,24,0.024,Transition
+Sierra Leone,61,0,20,81,0.081,Lagging
+Somalia,4,4,0,8,0.008,Lagging
+South Africa,3484,3442,6671,13597,13.597,High Performer
+South Sudan,0,0,30,30,0.030,Lagging
+Sudan,1482,0,190,1672,1.672,Transition
+Tanzania,1385,2,20,1407,1.407,Lagging
+Togo,67,0,67,134,0.134,Lagging
+Tunisia,66,245,773,1084,1.084,High Performer
+Uganda,1634,0,0,1634,1.634,Transition
+Zambia,3165,0,196,3361,3.361,Transition
+Zimbabwe,1080,0,70,1150,1.150,Transition
