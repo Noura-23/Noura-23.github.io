@@ -405,7 +405,7 @@ nav {
   color: #000000;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #E84E8A;
+  border-bottom: 2.05px solid #f3d5b5b8;
 }
 
 .data-content p {
@@ -435,121 +435,18 @@ nav {
   text-align: center;
 }
 
-.conclusion-section h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 15px;
-}
-
-.conclusion-subtitle {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #C72C6C;
-  margin-bottom: 30px;
-}
-
-.conclusion-section>p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #000000;
-  max-width: 1000px;
-  margin: 0 auto 30px;
-}
-
-/* Diagnostic Journey List */
-.journey-list {
-  background: linear-gradient(135deg, #FFE5F1, #FFD4E8);
-  padding: 30px;
-  margin: 30px auto;
-  max-width: 1000px;
-  border-radius: 10px;
-}
-
-.journey-list ol {
-  list-style-position: inside;
-  text-align: left;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.journey-list li {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #000000;
-  margin-bottom: 12px;
-  padding-left: 10px;
-}
-
-/* Key Findings */
-.key-findings {
-  margin: 35px auto;
-  max-width: 1000px;
-}
-
-.key-findings h3 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 30px;
-}
-
-.finding {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 25px;
-  padding: 25px;
-  background: linear-gradient(135deg, #FFE5F1, #FFD4E8);
-  border-radius: 10px;
-  text-align: left;
-}
-
-.finding-num {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #E84E8A, #C72C6C);
-  color: #FFFFFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.finding h4 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 12px;
-}
-
-.finding p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #000000;
-}
-
 /* Final Statement */
 .final-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-style: italic;
   font-weight: 600;
   color: #000000;
   line-height: 1.8;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 35px auto 0;
   padding: 30px;
-  background: linear-gradient(135deg, #E84E8A, #C72C6C);
+   background: #f3d5b5b8; /*linear-gradient(135deg, #f0669b, #ef468c) */
   border-radius: 10px;
 }
 
