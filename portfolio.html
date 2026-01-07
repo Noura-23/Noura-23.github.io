@@ -354,25 +354,36 @@
             <span class="challenge-number">CC10</span>
             <h2>Advanced Analysis and Machine Learning</h2>
 
-            <div class="charts-container">
-                <div class="chart-wrapper">
-                    <p class="task-description"><strong>Task 1: Advanced Analytics Chart</strong> - Produce a chart that
-                        uses more advanced analytics than standard line, bar or scatter charts.</p>
-                    <figure id="cc10_1"></figure>
-                </div>
-                <div class="chart-wrapper">
-                    <p class="task-description"><strong>Task 2: Machine Learning</strong> - Conduct an applied data
-                        analysis
-                        using any of the machine learning techniques taught in the Week 10 lecture and seminar.</p>
-                    <figure id="cc10_2"></figure>
-                </div>
+            <div class="chart-wrapper">
+                <p class="task-description"><strong>Task 1: Advanced Analytics Chart</strong> - Produce a chart that
+                    uses more advanced analytics than standard line, bar or scatter charts.</p>
+                <figure id="cc10_1"></figure>
             </div>
-            <p class="insight">xx.</p>
-            <p class="source"><strong>Source:</strong> <a href="xx" target="_blank">xx</a></p>
+
+            <div class="chart-wrapper">
+                <p class="task-description"><strong>Task 2: Machine Learning</strong> - Conduct an applied data
+                    analysis using any of the machine learning techniques taught in the Week 10 lecture and seminar.</p>
+
+                <figure id="cc10_2"></figure>
+            </div>
+            <p class="insight"> For this task, we hypothesized that countries experiencing frequent electrical outages would show
+            higher firm generator ownership, indicating a shadow energy economy compensating for grid failures." 
+            <br>
+            <br>
+            Our linear regression model achieved R² = 0.43, meaning grid unreliability explains 43%
+            of generator ownership variance across 46 African countries—a moderate but significant relationship.
+            This confirms our hypothesis that grid failures contribute substantially to generator investment, though
+            other factors like governance quality and business characteristics also play important roles in Africa's
+            shadow energy economy.</p>
+            <p class="source"><strong>Source:</strong> <a href="https://data.worldbank.org/indicator" target="_blank">World Bank</a> |
+                <a href="https://www.enterprisesurveys.org/en/datar" target="_blank">World Bank Enterprise Survey</a> |
+                <a href="https://pxweb.irena.org/pxweb/en/IRENASTAT/" target="_blank">IRENASTAT</a> | 
+                <a href="https://globalsolaratlas.info/global-pv-potential-study" target="_blank">Global Solar Atlas</a>
+            </p>
         </section>
         <script>
-            vegaEmbed('#cc10_1', '');
-            vegaEmbed('#cc10_2', '');
+            vegaEmbed('#cc10_1', 'Portfolio_charts/correlation_heatmap.json');
+            vegaEmbed('#cc10_2', 'Portfolio_charts/ml_africa.json');
         </script>
 
     </main>
