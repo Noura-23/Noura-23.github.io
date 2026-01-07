@@ -71,7 +71,7 @@
           "lookup": "properties.iso_a3",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Week%209/Africa_indicators.csv"
+              "url": "https://raw.githubusercontent.com/Noura-23/Noura-23.github.io/refs/heads/main/Project_data/Africa_indicators.csv"
             },
             "key": "iso",
             "fields": [

@@ -28,13 +28,11 @@
 
 <body>
     <!-- PROGRESSION BAR -->
-
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
     <!-- HEADER SECTION -->
-
     <section class="main-header">
         <!-- Navigation Bar -->
         <nav>
@@ -93,6 +91,12 @@
                 and electricity consumption (kWh per capita).</i>
         </p>
         <div id="vis1"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/1c0Hy3RMuz2LX01iFVOHcm2PJsHq173dy?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i>Notebook
+            </a>
+        </div>
         <div class="transitions">
             <p>
                 But what does this gap look like once we measure electricity use directly?
@@ -117,6 +121,12 @@
                 country.</i>
         </p>
         <div id="vis2"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/1FapMhkk-drR0IDMo4vkQIAM6jSG4x_3Q?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i>Notebook
+            </a>
+        </div>
         <div class="transitions">
             <p>
                 If consumption is this low even where access exists, the explanation cannot be access alone.
@@ -141,6 +151,16 @@
         </p>
         </p>
         <div id="vis3"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/1eKpCxXI2h3LHJtQnseqy88y9fZkty7DV?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i> Data Scraping Notebook
+            </a>
+            <a href="https://colab.research.google.com/drive/1h2vy4bDiN2zpcd4As2zSvNJ9HrAKu5f-?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i> Data Cleaning & Merging Notebook
+            </a>
+        </div>
         <div class="transitions">
             <p>
                 But high prices are only part of the story.
@@ -167,6 +187,12 @@
                 and the share of firms experiencing outages by country.</i>
         </p>
         <div id="vis4"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/1obiXYy-AcWw8UpLelJVXXkmkQKUrto70?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i> Notebook
+            </a>
+        </div>
         <div class="transitions">
             <p>
                 High prices limit electricity consumption, and unreliable grids push firms off the grid.
@@ -190,6 +216,12 @@
             <i style="font-size: 12px;"> Hover over the cells to view correlations.</i>
         </p>
         <div id="vis5"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/1wiWKZcdzk39eFJOterWrkYxfjEMYsXtc?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i> Notebook
+            </a>
+        </div>
         <div class="transitions">
             <p>
                 Given that deployment aligns more closely with income than solar resources,
@@ -214,6 +246,12 @@
                 consumption by country, and use the year slider to explore patterns from 2000 to 2023.</i>
         </p>
         <div id="vis6"></div>
+        <div class="chart-buttons">
+            <a href="https://colab.research.google.com/drive/10XAcviSxqPF7dYNmUyWQ0U7SSQ6HNBTd?usp=sharing"
+                target="_blank" class="notebook-btn">
+                <i class="fa-brands fa-google"></i> Notebook
+            </a>
+        </div>
     </section>
 
     <!-- ////// CONCLUSIONS SECTION ////// -->
@@ -226,55 +264,12 @@
         </p>
     </section>
 
-    <!-- ////// DATA & TOOLS SECTION ////// -->
-    <section class="data-section">
-        <h2>Data & Tools</h2>
-
-        <div class="data-content">
-            <h3>Data Sources</h3>
-            <p>
-                This project relies entirely on publicly accessible, open data from international organizations
-                and research institutions. Primary sources include: <strong>World Bank World Development
-                    Indicators</strong>
-                (electricity access, consumption, GDP, population 2010-2023), <strong>International Energy Agency
-                    Statistics</strong> (tariffs, generation mix), <strong>IRENA Renewable Capacity Statistics
-                    2024</strong>
-                (solar, wind, hydro installed capacity), <strong>World Bank Enterprise Surveys</strong> (generator
-                ownership rates 2015-2023), <strong>Global Solar Atlas</strong> and <strong>Global Wind Atlas</strong>
-                (renewable resource potential).
-            </p>
-        </div>
-
-        <div class="data-content">
-            <h3>Tools & Technologies</h3>
-            <p>
-                All visualizations built in <strong>Vega-Lite 5.x</strong>, embedded in HTML via
-                <strong>vegaEmbed</strong>.
-                Data processing workflow implemented in <strong>Python</strong> (pandas for data manipulation,
-                statsmodels for regression analysis). Complete data processing pipeline documented in public
-                <a href="[COLAB-URL]" target="_blank">Google Colab notebook</a>. All chart specifications and
-                processed datasets hosted on <a href="[GITHUB-URL]" target="_blank">GitHub repository</a>
-                for full reproducibility.
-            </p>
-        </div>
-
-        <div class="data-content">
-            <h3>Analytical Approach</h3>
-            <p>
-                Key methodological decisions: (1) <strong>Consumption per capita preferred over total
-                    generation</strong>
-                because it accounts for population size and reveals inequality invisible in aggregate figures.
-                (2) <strong>Generator ownership as reliability proxy</strong>—Enterprise Survey data on backup
-                generators
-                provides standardized measure of grid failure across countries. (3) <strong>Logarithmic scaling for
-                    GDP</strong>
-                addresses right-skewed income distribution. (4) <strong>Regression analysis</strong> uses OLS with
-                robust
-                standard errors. (5) <strong>Temporal classification</strong> based on electricity-GDP elasticity
-                thresholds
-                from development literature.
-            </p>
-        </div>
+    <!-- ////// GEN AI DISCLOSURE ////// -->
+    <section class="disclosure-section">
+        <h2><u>Gen AI Disclosure</u></h2>
+        <p>
+            I used ChatGPT and Claude AI as coding assistants for data cleaning in Python and chart creation in VegaLite.
+        </p>
     </section>
 
     <!-- ////// FOOTER ////// -->
@@ -286,7 +281,6 @@
         </p>
         <p class="footer-credit">Noura Coulibaly | London School of Economics and Political Science</p>
     </footer>
-
 
     <!-- JavaScript for Progression Bar -->
     <script>
@@ -321,8 +315,6 @@
         vegaEmbed('#vis5', 'Project_charts/chart5.json')
         vegaEmbed('#vis6', 'Project_charts/chart6.json')
     </script>
-
-
 
 
 </body>

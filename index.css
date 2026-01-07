@@ -302,6 +302,33 @@ nav {
 }
 
 /* ============================================= */
+/* GEN AI DISCLOSURE SECTION */
+/* ============================================= */
+
+.disclosure-section {
+  padding: 25px 20px;
+  background-color: #fcf8f2;
+  text-align: center;
+}
+
+.disclosure-section h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.disclosure-section p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: #000000;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ============================================= */
 /* FOOTER */
 /* ============================================= */
 
